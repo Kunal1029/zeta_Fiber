@@ -16,11 +16,13 @@ import Reset from "./components/UserCredential/Reset";
 // auth middleware
 import { AuthorizeUser , ProtectRoute} from "./middleware/auth";
 import Header from "./components/Header/Header";
+import ResponsiveAppBar from "./components/Header/ResponsiveAppBar";
 
 function App() {
   return (
     <BrowserRouter>
-    <Header />
+    {/* <Header /> */}
+    <ResponsiveAppBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

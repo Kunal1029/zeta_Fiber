@@ -1,21 +1,21 @@
 import { Link } from "react-router-dom";
 import "../../App.css";
-import UpperHeader from "./UpperHeader";
+// import UpperHeader from "./UpperHeader";
 
 function Header() {
   return (
     <div>
       {/* <!-- header section strats --> */}
-      <UpperHeader/>
-      <header className="header_section">
+      {/* <UpperHeader/> */}
+      <header className="header_section bg-light">
         <div className="container">
           <nav className="navbar navbar-expand-lg custom_nav-container">
             <a className="navbar-brand image-container" href="index.html">
               <img
-                src="./image/FCL.png"
+                src="./image/FL.png"
                 alt="Logo"
-                width="85"
-                height="75"
+                width="170"
+                height="85"
                 className=" d-inline-block align-text-top"
               />
             </a>
@@ -54,7 +54,7 @@ function Header() {
                 </li>
                 <li className="nav-item">
                   <Link to={"/price"} className="nav-link">
-                    Pricing
+                    Plans
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -91,11 +91,15 @@ function Header() {
                 </ul>
                 {/* : ""} */}
               </div>
+
+              
             </div>
           </nav>
         </div>
       </header>
       {/* <!-- end header section --> */}
+
+      
     </div>
   );
 }

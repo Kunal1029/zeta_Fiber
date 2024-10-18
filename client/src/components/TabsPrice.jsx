@@ -12,7 +12,7 @@ export default function CenteredTabs() {
   };
 
   return (
-    <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
+    <Box sx={{ width: "100%", bgcolor: "background.paper" }} className="glass">
       <Tabs value={value} onChange={handleChange} centered className="mb-5">
         <Tab label="Zeta Fiber" />
         <Tab label="Zeta Air Fiber" />

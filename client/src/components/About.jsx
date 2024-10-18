@@ -27,7 +27,7 @@ function About() {
             </div>
             <div className="col-md-6 ">
               <div className="img-box">
-                <img src="images/about-img.png" alt="" />
+                <img src="./image/about-img.png" alt="" />
               </div>
             </div>
           </div>

@@ -4,7 +4,7 @@ function Home() {
   return (
     <div className="">
       {/* <Header /> */}
-      <div className="hero_area">
+      <div className="hero_area b">
         {/* <!-- slider section --> */}
         <section className="slider_section">
           <div
@@ -12,7 +12,8 @@ function Home() {
             className="carousel slide"
             data-ride="carousel"
           >
-            <div className="carousel-inner">
+            <div className="carousel-inner ">
+
               <div className="carousel-item active">
                 <div className="container">
                   <div className="row">
@@ -43,7 +44,7 @@ function Home() {
                       <div className="row">
                         <div className="col-lg-10 mx-auto">
                           <div className="img-box">
-                            <img src="images/slider-img.png" alt="" />
+                            <img src="./image/slider-img.png" alt="" />
                           </div>
                         </div>
                       </div>
@@ -51,6 +52,7 @@ function Home() {
                   </div>
                 </div>
               </div>
+
               <div className="carousel-item">
                 <div className="container">
                   <div className="row">
@@ -81,7 +83,7 @@ function Home() {
                       <div className="row">
                         <div className="col-lg-10 mx-auto">
                           <div className="img-box">
-                            <img src="images/slider-img.png" alt="" />
+                            <img src="/image/slider-img.png" alt="" />
                           </div>
                         </div>
                       </div>
@@ -89,6 +91,7 @@ function Home() {
                   </div>
                 </div>
               </div>
+
               <div className="carousel-item">
                 <div className="container">
                   <div className="row">
@@ -119,7 +122,7 @@ function Home() {
                       <div className="row">
                         <div className="col-lg-10 mx-auto">
                           <div className="img-box">
-                            <img src="images/slider-img.png" alt="" />
+                            <img src="image/slider-img.png" alt="" />
                           </div>
                         </div>
                       </div>
@@ -127,7 +130,12 @@ function Home() {
                   </div>
                 </div>
               </div>
+
             </div>
+
+
+
+
             <div className="carousel_btn-box">
               <a
                 className="carousel-control-prev"
@@ -155,7 +163,7 @@ function Home() {
       <section className="service_section layout_padding">
         <div className="container mb-5">
           <div className="heading_container heading_center">
-            <h2>Our Services</h2>
+            <h2>Our Plans</h2>
           </div>
         </div>
         <div className="text-center">
@@ -169,7 +177,7 @@ function Home() {
 
       {/* <!-- about section --> */}
 
-      <section className="about_section layout_padding-bottom">
+      <section className="about_section layout_padding-bottom glass" > 
         <div className="container">
           <div className="row">
             <div className="col-md-6">
@@ -189,7 +197,7 @@ function Home() {
             </div>
             <div className="col-md-6">
               <div className="img-box">
-                <img src="images/about-img.png" alt="" />
+                <img src="/image/about-img.png" alt="" />
               </div>
             </div>
           </div>
@@ -205,7 +213,7 @@ function Home() {
           <div className="row">
             <div className="col-md-6">
               <div className="img-box">
-                <img src="images/server-img.jpg" alt="" />
+                <img src="./image/server-img.jpg" alt="" />
                 <div className="play_btn">
                   <button>
                     <i className="fa fa-play" aria-hidden="true"></i>
@@ -238,7 +246,7 @@ function Home() {
       <section className="price_section layout_padding">
         <div className="container">
           <div className="heading_container heading_center">
-            <h2>Our Pricing</h2>
+            <h2>Our Services</h2>
           </div>
           <div className="price_container">
             <div className="box">
@@ -328,7 +336,7 @@ function Home() {
                     <div className="col-md-10 mx-auto">
                       <div className="box">
                         <div className="img-box">
-                          <img src="images/client.jpg" alt="" />
+                          <img src="./image/client.jpg" alt="" />
                         </div>
                         <div className="detail-box">
                           <div className="client_info">

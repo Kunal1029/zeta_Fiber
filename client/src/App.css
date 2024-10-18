@@ -1,47 +1,50 @@
-.userDD {
-  /* border: 2px black solid; */
-  position: relative;
+
+/* nav menu without responsive */
+/* .muiNav{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+} */
+html , body{
+  scrollbar-width: none;
+}
+.muiNav .muiNav1 ul{
+  display: flex;
+  /* justify-content: star; */
+  align-items: center;
+  gap: 40px;
+  text-decoration: none;
+  list-style: none;
 }
 
-.userDD ul {
+
+
+.muiDD ul {
   /* border: 2px saddlebrown solid; */
-  position: absolute;
-  width: fit-content;
-  background-color: var(--primary-color);
+  /* position: absolute; */
+  /* width: fit-content; */
+  /* background-color: var(--primary-color); */
   /* left: -30px; */
   text-decoration: none;
   list-style: none;
-  padding: 10px 25px 10px 15px;
-  border-radius: 5px;
-  z-index: 99;
-  opacity: 0;
-  visibility: hidden;
+  padding: 0px 25px 0px 10px;
+  /* border-radius: 5px; */
+  /* z-index: 99; */
+  /* opacity: 0; */
+  /* visibility: hidden; */
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  
 }
-.userDD ul li a {
-  color: var(--mix1-color);
+.muiDD ul li a {
+  color: var(--primary-color);
 }
-.userDD ul li {
+.muiDD ul li {
   transition: transform 0.2s ease;
 }
 
-.userDD:hover ul {
-  opacity: 1;
-  visibility: visible;
-  /* background-color: var(--primary-color); */
-}
-.userDD ul li:hover {
+.muiDD ul li:hover {
   transform: scale(1.08);
 }
-
-
-
-
-/* .CIT:hover{
-  transition: transform 0.4s ease;
-  transform: scale(1.08);
-  z-index: 1001;
-} */
 
 .card-wrapper {
   transition: transform 0.4s ease;
@@ -86,4 +89,25 @@
 .tr{
   border: 2px saddlebrown solid;
   transition: transform 0.4s ease !important;
+}
+
+
+.ModalCard{
+  background-image: url("../image/about-img.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.formCard{
+  background-color: rgba(160, 64, 64, 0.306);
+  
+}
+
+.trylImage{
+  background-image: url("./image/6.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }

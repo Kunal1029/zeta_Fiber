@@ -92,6 +92,7 @@ export default function BuyModal({ amount, onOpenModal, onCloseModal }) {
         Buy Now
       </Button>
       <Modal
+       className=""
         aria-labelledby="spring-modal-title"
         aria-describedby="spring-modal-description"
         open={open}
@@ -104,11 +105,8 @@ export default function BuyModal({ amount, onOpenModal, onCloseModal }) {
           },
         }}
       >
-        <Fade in={open}>
-          <Box sx={style}>
-            <Typography id="spring-modal-title" variant="h6" component="h2">
-              Text in a modal
-            </Typography>
+        <Fade in={open} >
+          <Box sx={style}  className="ModalCard">
             <Typography id="spring-modal-description" sx={{ mt: 2 }}>
               {amount}
               <UserName />
