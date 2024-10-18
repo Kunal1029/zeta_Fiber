@@ -1,14 +1,15 @@
-
 /* nav menu without responsive */
 /* .muiNav{
   display: flex;
   align-items: center;
   justify-content: flex-start;
 } */
-html , body{
+html,
+body {
   scrollbar-width: none;
 }
-.muiNav .muiNav1 ul{
+
+.muiNav .muiNav1 ul {
   display: flex;
   /* justify-content: star; */
   align-items: center;
@@ -17,8 +18,13 @@ html , body{
   list-style: none;
 }
 
-
-
+.muiNav1 ul li a {
+  color: white;
+}
+.appBar {
+  background-color: rgba(0, 0, 0, 0.363) !important;
+  /* background-color: rgba(15, 18, 20, 0.262)!important; */
+}
 .muiDD ul {
   /* border: 2px saddlebrown solid; */
   /* position: absolute; */
@@ -33,7 +39,6 @@ html , body{
   /* opacity: 0; */
   /* visibility: hidden; */
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  
 }
 .muiDD ul li a {
   color: var(--primary-color);
@@ -46,6 +51,12 @@ html , body{
   transform: scale(1.08);
 }
 
+.muiNavRes ul {
+  text-decoration: none;
+  list-style: none;
+  padding: 0px 25px 0px 10px;
+}
+
 .card-wrapper {
   transition: transform 0.4s ease;
 }
@@ -55,10 +66,10 @@ html , body{
   border: 2px var(--secondary-color) solid;
 }
 
-.card3{
+.card3 {
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
 }
 
 .carousel-container {
@@ -86,28 +97,44 @@ html , body{
 .carousel-control-next {
   cursor: pointer;
 }
-.tr{
+.tr {
   border: 2px saddlebrown solid;
   transition: transform 0.4s ease !important;
 }
 
-
-.ModalCard{
+.ModalCard {
   background-image: url("../image/about-img.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
-.formCard{
+.formCard {
   background-color: rgba(160, 64, 64, 0.306);
-  
 }
 
-.trylImage{
+.firstSectionHome {
   background-image: url("./image/6.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
+.firstSectionHome h1,
+p {
+  color: var(--primary-color);
+}
+.blurrybg {
+  background-color: rgba(0, 0, 0, 0.363) !important;
+  /* background-color: rgba(15, 18, 20, 0.262)!important; */
+}
+.blurrybglast {
+  /* background-color: rgba(16, 27, 89, 0.286) !important;
+  background-color: rgba(15, 18, 20, 0.433)!important; */
+  background: linear-gradient(#5680e9aa, #84ceebc4, #5abaeab7, #c1c8e4bd, #8760d0a8) !important;
+}
+.subContainer{
+  width: 85vw;
+  margin: auto;
+}
+

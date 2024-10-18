@@ -4,15 +4,15 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import PriceSlide from "./PriceSlide";
 
-export default function CenteredTabs() {
+export default function TabsPrice() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
+  
   return (
-    <Box sx={{ width: "100%", bgcolor: "background.paper" }} className="glass">
+    <Box sx={{ width: "100%" }} className="glass ">
       <Tabs value={value} onChange={handleChange} centered className="mb-5">
         <Tab label="Zeta Fiber" />
         <Tab label="Zeta Air Fiber" />

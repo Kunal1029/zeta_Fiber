@@ -1,4 +1,5 @@
-import VerticalTabs from "./TabsPrice";
+import TabsPrice from "./TabsPrice";
+import Button from "@mui/material/Button";
 
 function Home() {
   return (
@@ -6,8 +7,8 @@ function Home() {
       {/* <Header /> */}
       <div className="hero_area b">
         {/* <!-- slider section --> */}
-        <section className="slider_section">
-          <div
+        <section className="slider_section firstSectionHome">
+          {/* <div
             id="customCarousel1"
             className="carousel slide"
             data-ride="carousel"
@@ -156,20 +157,56 @@ function Home() {
                 <span className="sr-only">Next</span>
               </a>
             </div>
+          </div> */}
+          <div className="subContainer" >
+            <div className="row">
+              <div className="col-md-6">
+                <div className="detail-box">
+                  <h1>
+                    Fast & Secure <br />
+                    Web Hosting
+                  </h1>
+                  <p>
+                    Anything embarrassing hidden in the middle of text. All the
+                    Lorem Ipsuanything embarrassing hidden in the middle of
+                    text. All the Lorem Ipsumm
+                  </p>
+                  <div className="btn-box">
+                    {/* <a href="" className="btn-1">
+                      {" "}
+                      View Plans
+                    </a> */}
+                    <Button variant="contained">View Plans</Button> &nbsp;
+                    <Button variant="contained" className="bg-warning">
+                      Contact Us
+                    </Button>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div className="row">
+                  <div className="col-lg-10 mx-auto">
+                    <div className="img-box">
+                      <img src="./image/slider-img.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>
 
-      <section className="service_section layout_padding">
+      <section className="service_section layout_padding firstSectionHome">
         <div className="container mb-5">
           <div className="heading_container heading_center">
             <h2>Our Plans</h2>
           </div>
         </div>
         <div className="text-center">
-           {/* <h3>Zita Fiber</h3> */}
+          {/* <h3>Zita Fiber</h3> */}
           {/* <PriceSlide /> */}
-          <VerticalTabs />
+          <TabsPrice />
         </div>
       </section>
 
@@ -177,8 +214,8 @@ function Home() {
 
       {/* <!-- about section --> */}
 
-      <section className="about_section layout_padding-bottom glass" > 
-        <div className="container">
+      <section className="about_section layout_padding-bottom glass firstSectionHome">
+        <div className="subContainer">
           <div className="row">
             <div className="col-md-6">
               <div className="detail-box">
@@ -192,7 +229,9 @@ function Home() {
                   text. All the Lorem Ipsum generators on the Internet tend to
                   repeat predefined chunks
                 </p>
-                <a href=""> Read More </a>
+                <Button variant="contained" className="bg-warning">
+                  Read More{" "}
+                </Button>
               </div>
             </div>
             <div className="col-md-6">
@@ -208,8 +247,8 @@ function Home() {
 
       {/* <!-- server section --> */}
 
-      <section className="server_section">
-        <div className="container">
+      <section className="server_section  firstSectionHome">
+        <div className="subContainer ">
           <div className="row">
             <div className="col-md-6">
               <div className="img-box">
@@ -223,7 +262,7 @@ function Home() {
             </div>
             <div className="col-md-6">
               <div className="detail-box">
-                <div className="heading_container">
+                <div className="heading_container mb-3">
                   <h2>Let us manage your server</h2>
                   <p>
                     Internet. It uses a dictionary of over 200 Latin words,
@@ -232,7 +271,9 @@ function Home() {
                     Lorem Ipsum is therefore
                   </p>
                 </div>
-                <a href=""> Read More </a>
+                <Button variant="contained" className="">
+                  Read More
+                </Button>
               </div>
             </div>
           </div>
@@ -243,8 +284,8 @@ function Home() {
 
       {/* <!-- price section --> */}
 
-      <section className="price_section layout_padding">
-        <div className="container">
+      <section className="price_section layout_padding  firstSectionHome">
+        <div className="subContainer">
           <div className="heading_container heading_center">
             <h2>Our Services</h2>
           </div>
@@ -265,7 +306,9 @@ function Home() {
                 </ul>
               </div>
               <div className="btn-box">
-                <a href=""> See Detail </a>
+                <Button variant="contained" className="">
+                  See Detail
+                </Button>
               </div>
             </div>
             <div className="box">
@@ -284,7 +327,9 @@ function Home() {
                 </ul>
               </div>
               <div className="btn-box">
-                <a href=""> See Detail </a>
+                <Button variant="contained" className="">
+                  See Detail
+                </Button>
               </div>
             </div>
             <div className="box">
@@ -303,7 +348,9 @@ function Home() {
                 </ul>
               </div>
               <div className="btn-box">
-                <a href=""> See Detail </a>
+                <Button variant="contained" className="">
+                  See Detail
+                </Button>
               </div>
             </div>
           </div>
@@ -313,8 +360,8 @@ function Home() {
       {/* <!-- price section --> */}
 
       {/* <!-- client section --> */}
-      <section className="client_section">
-        <div className="container">
+      <section className="client_section  firstSectionHome">
+        <div className="subContainer">
           <div className="heading_container heading_center">
             <h2>Testimonial</h2>
             <p>
@@ -336,7 +383,7 @@ function Home() {
                     <div className="col-md-10 mx-auto">
                       <div className="box">
                         <div className="img-box">
-                          <img src="./image/client.jpg" alt="" />
+                          <img src="./image/.png" alt="" />
                         </div>
                         <div className="detail-box">
                           <div className="client_info">
@@ -459,14 +506,14 @@ function Home() {
       {/* <!-- end client section --> */}
 
       {/* <!-- contact section --> */}
-      <section className="contact_section layout_padding-bottom">
+      <section className="contact_section layout_padding-bottom  firstSectionHome">
         <div className="container">
           <div className="heading_container heading_center">
             <h2>Get In Touch</h2>
           </div>
-          <div className="row">
-            <div className="col-md-8 col-lg-6 mx-auto">
-              <div className="form_container">
+          <div className="row ">
+            <div className="col-md-8 col-lg-6 mx-auto p-5 blurrybglast ">
+              <div className="form_container ">
                 <form action="">
                   <div>
                     <input type="text" placeholder="Your Name" />
@@ -485,7 +532,9 @@ function Home() {
                     />
                   </div>
                   <div className="btn_box">
-                    <button>SEND</button>
+                    <Button variant="contained" className="">
+                      Send
+                    </Button>
                   </div>
                 </form>
               </div>

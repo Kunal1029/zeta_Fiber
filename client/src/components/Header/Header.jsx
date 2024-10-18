@@ -65,12 +65,12 @@ function Header() {
               </ul>
               {/* Login start */}
 
-              <div>
+              {/* <div>
                 <p className="text-danger mt-3"></p>
-              </div>
+              </div> */}
 
               {/* <!-- Example single danger button --> */}
-              <div className="userDD">
+              {/* <div className="userDD">
                 <button
                   type="button"
                   className="btn"
@@ -78,8 +78,6 @@ function Header() {
                   <i className="fa-regular fa-xl fa-circle-user" style={{color:"#003E87"}}></i>
                   <i className="fa-solid fa-caret-down"></i>
                 </button>
-
-                {/* {userDropDown ? */}
                 <ul className="">
                   <li>
                     <Link to={"/login"}>Login</Link>
@@ -89,8 +87,7 @@ function Header() {
                     <Link to={"/register"}>Register</Link>
                   </li>
                 </ul>
-                {/* : ""} */}
-              </div>
+              </div> */}
 
               
             </div>

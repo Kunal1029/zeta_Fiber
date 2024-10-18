@@ -3,21 +3,13 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
 import "../../App.css";
 
-const pages = ["Home", "About", "Services", "Plans", "Contact Us"];
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
-const settings = ["Login", "Register"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -39,8 +31,8 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="fixed" color="transparent">
-      <Container maxWidth="xl">
+    <AppBar position="fixed" className="appBar px-5">
+      <Container maxWidth="xl" >
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
@@ -52,7 +44,7 @@ function ResponsiveAppBar() {
               className="d-inline-block align-text-top"
               style={{ objectFit: "contain" }}
             />
-          </Box>
+          </Box>  {/* logo main */}
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -82,15 +74,37 @@ function ResponsiveAppBar() {
               onClose={handleCloseNavMenu}
               sx={{ display: { xs: "block", md: "none" } }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: "center" }}>{page}</Typography>
-                </MenuItem>
-              ))}
+              <div onClick={handleCloseNavMenu} className="muiNavRes">
+                <ul className="m-auto">
+                  <li className=" active">
+                    <Link to={"/"} className="">
+                      Home <span className="sr-only">(current)</span>
+                    </Link>
+                  </li>
+                  <li className="">
+                    <Link to={"/about"} className="">
+                      About
+                    </Link>
+                  </li>
+                  <li className="">
+                    <Link to={"/service"} className="">
+                      Services
+                    </Link>
+                  </li>
+                  <li className="">
+                    <Link to={"/price"} className="">
+                      Plans
+                    </Link>
+                  </li>
+                  <li className="">
+                    <Link to={"/contact"} className="">
+                      Contact Us
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </Menu>
-          </Box>
-
-          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
+          </Box> {/* menu resp */}
 
           <Box
             noWrap
@@ -104,7 +118,7 @@ function ResponsiveAppBar() {
               className="d-inline-block align-text-top"
               style={{ objectFit: "contain" }}
             />
-          </Box>
+          </Box>  {/* logo resp */}
 
           <Box
             sx={{
@@ -146,7 +160,7 @@ function ResponsiveAppBar() {
               </ul>
             </div>
             {/* // ))} */}
-          </Box>
+          </Box> {/* main menu */}
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
@@ -184,9 +198,8 @@ function ResponsiveAppBar() {
                   </li>
                 </ul>
               </div>
-              
             </Menu>
-          </Box>
+          </Box> {/* user dropdown */}
         </Toolbar>
       </Container>
     </AppBar>

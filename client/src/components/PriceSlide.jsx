@@ -68,7 +68,8 @@ const PriceSlide = () => {
   const totalPages = Math.ceil(zetaPlans.length);
 
   return (
-    <div className="card3 mb-5">
+
+    <div className="card3 mb-5 ">
       <div className="carousel-container">
         <div className="carousel-inner mb-5">
           {/* Previous Button */}
@@ -89,7 +90,7 @@ const PriceSlide = () => {
               const middleIndex = Math.floor(visibleCards / 2);
 
               return (
-                <div key={index}>
+                <div key={index} className="">
                   {middleIndex === index ? (
                     <div
                       className={`card-wrapper active bounce`}
@@ -108,7 +109,7 @@ const PriceSlide = () => {
                       style={{
                         transform: "scale(0.9)",
                         transition: "transform 0.4s ease",
-                        opacity: "0.4",
+                        opacity: "0.6",
                       }}
                     >
                       <Card item={item} setIsPaused={setIsPaused} />

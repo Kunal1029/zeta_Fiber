@@ -12,7 +12,8 @@ body {
     background-color: var(--mix1-color);
     overflow-x: hidden;
   }
-  
+
+ 
   .header_section{
     background-color: var(--secondary-color);
   }
@@ -117,7 +118,7 @@ body {
   /*header section*/
   .hero_area {
     position: relative;
-    background-color: #020230;
+    /* background-color: #020230; */
     min-height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -484,9 +485,9 @@ body {
   }
   
   .server_section {
-    background: linear-gradient(110deg, transparent 25%, #020230 25%);
+    /* background: linear-gradient(110deg, transparent 25%, #020230 25%); */
     padding: 55px 0;
-    color: #ffffff;
+    color: var(--primary-color);
   }
   
   .server_section .row {
@@ -618,7 +619,7 @@ body {
     display: inline-block;
     padding: 10px 45px;
     background-color: #ff4646;
-    color: #ffffff;
+    /* color: #ffffff; */
     border-radius: 5px;
     border: 1px solid #ff4646;
     -webkit-transition: all .3s;
@@ -628,7 +629,7 @@ body {
   
   .server_section .detail-box a:hover {
     background-color: transparent;
-    color: #ff4646;
+    /* color: #ff4646; */
   }
   
   .price_section .price_container {
@@ -826,7 +827,7 @@ body {
   
   .contact_section .form_container input {
     width: 100%;
-    border: 1px solid #b0b0b0;
+    border: 1px solid var(--primary-color);
     height: 50px;
     margin-bottom: 25px;
     padding-left: 15px;
@@ -836,19 +837,19 @@ body {
   }
   
   .contact_section .form_container input::-webkit-input-placeholder {
-    color: #b0b0b0;
+    /* color: #b0b0b0;  */
   }
   
   .contact_section .form_container input:-ms-input-placeholder {
-    color: #b0b0b0;
+    /* color: #b0b0b0; */
   }
   
   .contact_section .form_container input::-ms-input-placeholder {
-    color: #b0b0b0;
+    /* color: #b0b0b0; */
   }
   
   .contact_section .form_container input::placeholder {
-    color: #b0b0b0;
+    /* color: #b0b0b0; */
   }
   
   .contact_section .form_container input.message-box {
@@ -869,10 +870,9 @@ body {
     text-transform: uppercase;
     display: inline-block;
     padding: 15px 65px;
-    background-color: #ff4646;
+    background-color: var(--primary-color);
     color: #ffffff;
-    border-radius: 0;
-    border: 1px solid #ff4646;
+    border-radius: 20px;
     -webkit-transition: all .3s;
     transition: all .3s;
     font-weight: bold;
@@ -880,7 +880,7 @@ body {
   
   .contact_section .form_container button:hover {
     background-color: transparent;
-    color: #ff4646;
+    color: var(--primary-color);
   }
   
   /* info section */
