@@ -4,7 +4,7 @@ import { useFormik } from "formik";
 import { registerValidation } from "../helper/Validate";
 import { useState } from "react";
 import convertToBase64 from "../helper/convert";
-import Header from "../Header/Header";
+// import Header from "../Header/Header";
 import { registerUser } from "../helper/helper.js";
 import { useNavigate } from "react-router-dom";
 
@@ -41,7 +41,6 @@ function Register() {
           .catch((error) => {
             console.error("Registration error: ", error);
           });
-
       } catch (error) {
         console.error("Registration error: ", error);
       }
@@ -55,78 +54,228 @@ function Register() {
   };
 
   return (
-    <div className="text-white sub_page bg-dark">
-      <Header />
-
+    <div className="parent-div container-fluid bg-danger">
       <Toaster position="top-center" reverseOrder={false}></Toaster>
-      <h1>Hello, Happy Register</h1>
+      <div className="child-div container">
+        <br />
+        <br />
+        <br />
 
-      <form className="mt-5" onSubmit={formik.handleSubmit}>
-        <div className="text-center mb-3">
-          <label htmlFor="profile" className="mb-3">
-            <img src={file || "/avt.png"} className="rounded w-25" alt="..." />
-          </label>
+        <div className="row real-content">
+          <div className="col-xl-5 section-one">
+            <h2 className="section-one-element">
+              <img src="./image/FL.png" alt="" className="w-25" />
+            </h2>
+            <h5>ZetaOne</h5>
+            <h3 style={{fontWeight: "500"}} className="nice mt-5">
+              Nice to meet you
+            </h3>
+            <h5 className="nice">Just register to join with us</h5>
+          </div>
 
-          <input onChange={onUpload} type="file" id="profile" name="profile" />
+          <div className="col-xl-7 section-two">
+            {/* <!-- Subsection start --> */}
+            <div className="row" style={{padding: "0% 11% 0% 11%"}}>
+              <div className="col-sm-6">
+                <h2>Register</h2>
+              </div>
+              <div className="col-sm-6 account-already">
+                <h5>
+                  <i className="fa-solid fa-arrow-right"></i> Already have an
+                  account?
+                </h5>
+              </div>
+            </div>
+            {/* <!-- Subsection end --> */}
+
+            <div className="social-icons mt-5">
+              <div>
+                <i className="fa-brands fa-facebook fa-xl text-primary"></i>
+              </div>
+              <div>
+                <i className="fa-brands fa-google fa-xl text-danger"></i>
+              </div>
+            </div>
+
+            <h6 className="login-or mt-4 text-dark">
+              <p className="line"></p>
+              Or register with email
+              <p className="line"></p>
+            </h6>
+
+            <div className="container form-container">
+              <form
+                className="mt-4"
+                style={{padding: "0% 11% 0% 11%"}}
+                onSubmit={formik.handleSubmit}
+              >
+                <div className="text-center mb-3">
+                  <label htmlFor="profile" className="mb-3">
+                    <img
+                      src={file || "/avt.png"}
+                      className="rounded w-25"
+                      alt="..."
+                    />
+                  </label>
+
+                  <input
+                    onChange={onUpload}
+                    type="file"
+                    id="profile"
+                    name="profile"
+                  />
+                </div>
+
+                <input
+                  className="form-control mt-3"
+                  placeholder="Name?"
+                  type="text"
+                />
+
+                <div className="">
+                  <input
+                    type="email"
+                    {...formik.getFieldProps("email")}
+                    placeholder="Email"
+                    className={`form-control mt-3 ${
+                      formik.errors.email && formik.touched.email
+                        ? "is-invalid"
+                        : ""
+                    }`}
+                  />
+                  {formik.errors.email && formik.touched.email && (
+                    <div className="invalid-feedback">
+                      {formik.errors.email}
+                    </div>
+                  )}
+                </div>
+
+                <div className="">
+                  <input
+                    type="text"
+                    {...formik.getFieldProps("username")}
+                    placeholder="Username"
+                    className={`form-control mt-3 ${
+                      formik.errors.username && formik.touched.username
+                        ? "is-invalid"
+                        : ""
+                    }`}
+                  />
+                  {formik.errors.username && formik.touched.username && (
+                    <div className="invalid-feedback">
+                      {formik.errors.username}
+                    </div>
+                  )}
+                </div>
+
+                <input
+                  className="form-control mt-3"
+                  placeholder="Phone?"
+                  type="number"
+                />
+
+                <div className="row mt-3">
+                  <div className="col-md-6">
+                    <input
+                      type="password"
+                      {...formik.getFieldProps("password")}
+                      placeholder="Password"
+                      className={`form-control ${
+                        formik.errors.password && formik.touched.password
+                          ? "is-invalid"
+                          : ""
+                      }`}
+                    />
+                    {formik.errors.password && formik.touched.password && (
+                      <div className="invalid-feedback">
+                        {formik.errors.password}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="col-md-6">
+                    <input
+                      type="password"
+                      {...formik.getFieldProps("password")}
+                      placeholder="Confirm Password"
+                      className={`confirm form-control ${
+                        formik.errors.password && formik.touched.password
+                          ? "is-invalid"
+                          : ""
+                      }`}
+                    />
+                    {formik.errors.password && formik.touched.password && (
+                      <div className="invalid-feedback">
+                        {formik.errors.password}
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                <button type="submit" className="btn btn-outline-warning">
+                  Sign Up
+                </button>
+              </form>
+
+              {/* <!-- mobil size --> */}
+              <div className="col-sm-6 account-already-mobile">
+                <h5>
+                  <i className="fa-solid fa-arrow-right"></i> Already have an
+                  account?{" "}
+                  <Link className="text-danger" to={"/login"}>
+                    Login
+                  </Link>
+                </h5>
+              </div>
+              {/* <!-- mobil size end --> */}
+
+              {/* <!-- button section start --> */}
+              <div
+                className="row mt-4 last-section"
+                style={{padding: "0% 0% 0% 6%"}}
+              >
+                <div className="col-md-6">
+                  <div
+                    className="check-box"
+                    style={{padding: "0% 0% 0% 11%", display: "flex"}}
+                  >
+                    <input
+                      style={{width: "6%", height: "1.1rem"}}
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <p>
+                      Accept the Terms of Service & Privacy
+                      Policy *
+                    </p>
+                    
+                  </div>
+                </div>
+
+                <div className="col-md-6 button-continue">
+                  <button className="btn">continue</button>
+                </div>
+                
+              </div>
+              {/* <!-- button section end --> */}
+
+              <h5>
+                Already Registered?{" "}
+                <Link className="text-danger" to={"/login"}>
+                  Login
+                </Link>
+              </h5>
+            </div>
+
+            <div className="mt-5"></div>
+          </div>
         </div>
-
-        <div className="mb-3">
-          <input
-            type="email"
-            {...formik.getFieldProps("email")}
-            placeholder="Email"
-            className={`form-control w-50 m-auto ${
-              formik.errors.email && formik.touched.email ? "is-invalid" : ""
-            }`}
-          />
-          {formik.errors.email && formik.touched.email && (
-            <div className="invalid-feedback">{formik.errors.email}</div>
-          )}
-        </div>
-
-        <div className="mb-3">
-          <input
-            type="text"
-            {...formik.getFieldProps("username")}
-            placeholder="Username"
-            className={`form-control w-50 m-auto ${
-              formik.errors.username && formik.touched.username
-                ? "is-invalid"
-                : ""
-            }`}
-          />
-          {formik.errors.username && formik.touched.username && (
-            <div className="invalid-feedback">{formik.errors.username}</div>
-          )}
-        </div>
-
-        <div className="mb-3">
-          <input
-            type="password"
-            {...formik.getFieldProps("password")}
-            placeholder="Password"
-            className={`form-control w-50 m-auto ${
-              formik.errors.password && formik.touched.password
-                ? "is-invalid"
-                : ""
-            }`}
-          />
-          {formik.errors.password && formik.touched.password && (
-            <div className="invalid-feedback">{formik.errors.password}</div>
-          )}
-        </div>
-
-        <button type="submit" className="btn btn-outline-warning">
-          Sign Up
-        </button>
-      </form>
-
-      <h5>
-        Already Registered?{" "}
-        <Link className="text-danger" to={"/login"}>
-          Login
-        </Link>
-      </h5>
+      </div>
+      <br />
+      <br />
+      <br />
     </div>
   );
 }

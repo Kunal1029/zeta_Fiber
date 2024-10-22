@@ -12,6 +12,7 @@ import Password from "./components/UserCredential/Password";
 import Profile from "./components/UserCredential/Profile";
 import Recovery from "./components/UserCredential/Recovery";
 import Reset from "./components/UserCredential/Reset";
+import 'animate.css';
 
 // auth middleware
 import { AuthorizeUser , ProtectRoute} from "./middleware/auth";
@@ -22,7 +23,7 @@ function App() {
   return (
     <BrowserRouter>
     {/* <Header /> */}
-    <ResponsiveAppBar />
+    <ResponsiveAppBar  />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

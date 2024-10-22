@@ -1,7 +1,44 @@
 import TabsPrice from "./TabsPrice";
 import Button from "@mui/material/Button";
+import { useState, useEffect } from "react";
 
 function Home() {
+ 
+  const [isObserverReady, setObserverReady] = useState(false); // Prevents observing too soon
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.34, // Trigger when 50% of the element is visible
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    const elementsToObserve = document.querySelectorAll(".animate-on-scroll");
+
+    elementsToObserve.forEach((element) => observer.observe(element));
+
+    // Clean up on unmount
+    return () => observer.disconnect();
+  }, [isObserverReady]);
+
+  useEffect(() => {
+    // Add a small delay before initializing the observer to ensure DOM is ready
+    setTimeout(() => setObserverReady(true), 100);
+  }, []);
+
   return (
     <div className="">
       {/* <Header /> */}
@@ -158,9 +195,9 @@ function Home() {
               </a>
             </div>
           </div> */}
-          <div className="subContainer" >
+          <div className="subContainer ">
             <div className="row">
-              <div className="col-md-6">
+              <div className="col-md-6 animate__animated animate__fadeInLeft">
                 <div className="detail-box">
                   <h1>
                     Fast & Secure <br />
@@ -171,7 +208,7 @@ function Home() {
                     Lorem Ipsuanything embarrassing hidden in the middle of
                     text. All the Lorem Ipsumm
                   </p>
-                  <div className="btn-box">
+                  <div className="btn-box animate__animated animate__fadeInUpBig">
                     {/* <a href="" className="btn-1">
                       {" "}
                       View Plans
@@ -183,7 +220,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-6">
+              <div className="col-md-6 animate__animated animate__fadeInRight">
                 <div className="row">
                   <div className="col-lg-10 mx-auto">
                     <div className="img-box">
@@ -198,26 +235,31 @@ function Home() {
       </div>
 
       <section className="service_section layout_padding firstSectionHome">
-        <div className="container mb-5">
+        <div className={`container mb-5  myAnimLeft animate-on-scroll`}>
           <div className="heading_container heading_center">
             <h2>Our Plans</h2>
           </div>
+
         </div>
-        <div className="text-center">
+
+        <div
+          className={`text-center  myAnimLeft animate-on-scroll`}
+        >
           {/* <h3>Zita Fiber</h3> */}
           {/* <PriceSlide /> */}
           <TabsPrice />
         </div>
+
       </section>
 
       {/* <!-- end service section --> */}
 
       {/* <!-- about section --> */}
 
-      <section className="about_section layout_padding-bottom glass firstSectionHome">
-        <div className="subContainer">
-          <div className="row">
-            <div className="col-md-6">
+      <section className="about_section   layout_padding-bottom glass firstSectionHome">
+        <div className="subContainer ">
+          <div className="row  myAnimLeft animate-on-scroll">
+            <div className={`col-md-6`}>
               <div className="detail-box">
                 <div className="heading_container">
                   <h2>About Us</h2>
@@ -248,7 +290,7 @@ function Home() {
       {/* <!-- server section --> */}
 
       <section className="server_section  firstSectionHome">
-        <div className="subContainer ">
+        <div className="subContainer  myAnimLeft animate-on-scroll ">
           <div className="row">
             <div className="col-md-6">
               <div className="img-box">
@@ -285,12 +327,12 @@ function Home() {
       {/* <!-- price section --> */}
 
       <section className="price_section layout_padding  firstSectionHome">
-        <div className="subContainer">
+        <div className="subContainer  ">
           <div className="heading_container heading_center">
             <h2>Our Services</h2>
           </div>
           <div className="price_container">
-            <div className="box">
+            <div className="box box1 animate-on-scroll ">
               <div className="detail-box">
                 <h2>
                   $ <span>49</span>
@@ -311,7 +353,7 @@ function Home() {
                 </Button>
               </div>
             </div>
-            <div className="box">
+            <div className="box box2 animate-on-scroll">
               <div className="detail-box">
                 <h2>
                   $ <span>99</span>
@@ -332,7 +374,7 @@ function Home() {
                 </Button>
               </div>
             </div>
-            <div className="box">
+            <div className="box box3 animate-on-scroll">
               <div className="detail-box">
                 <h2>
                   $ <span>149</span>
@@ -361,16 +403,16 @@ function Home() {
 
       {/* <!-- client section --> */}
       <section className="client_section  firstSectionHome">
-        <div className="subContainer">
+        <div className="subContainer myAnimLeft animate-on-scroll">
           <div className="heading_container heading_center">
-            <h2>Testimonial</h2>
-            <p>
+            <h2 className="box1 animate-on-scroll">Testimonial</h2>
+            <p className="box3 animate-on-scroll">
               Even slightly believable. If you are going to use a passage of
               Lorem Ipsum, you need to
             </p>
           </div>
         </div>
-        <div className="container px-0">
+        <div className="container px-0 box2 animate-on-scroll">
           <div
             id="customCarousel2"
             className="carousel slide"
@@ -507,31 +549,31 @@ function Home() {
 
       {/* <!-- contact section --> */}
       <section className="contact_section layout_padding-bottom  firstSectionHome">
-        <div className="container">
+        <div className="container  myAnimLeft animate-on-scroll">
           <div className="heading_container heading_center">
-            <h2>Get In Touch</h2>
+            <h2 className="box3 animate-on-scroll">Get In Touch</h2>
           </div>
           <div className="row ">
             <div className="col-md-8 col-lg-6 mx-auto p-5 blurrybglast ">
               <div className="form_container ">
                 <form action="">
-                  <div>
+                  <div className="box1 animate-on-scroll">
                     <input type="text" placeholder="Your Name" />
                   </div>
-                  <div>
+                  <div className="box1 animate-on-scroll">
                     <input type="email" placeholder="Your Email" />
                   </div>
-                  <div>
+                  <div className="box1 animate-on-scroll"> 
                     <input type="text" placeholder="Your Phone" />
                   </div>
-                  <div>
+                  <div className="box1 animate-on-scroll">
                     <input
                       type="text"
                       className="message-box"
                       placeholder="Message"
                     />
                   </div>
-                  <div className="btn_box">
+                  <div className="btn_box box1 animate-on-scroll">
                     <Button variant="contained" className="">
                       Send
                     </Button>

@@ -31,7 +31,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="fixed" className="appBar px-5">
+    <AppBar position="fixed" className="appBar px-5 animate__animated animate__fadeInDown">
       <Container maxWidth="xl" >
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
@@ -41,12 +41,12 @@ function ResponsiveAppBar() {
               alt="Logo"
               width="170"
               height="85"
-              className="d-inline-block align-text-top"
+              className="d-inline-block align-text-top animate__animated animate__fadeInLeft"
               style={{ objectFit: "contain" }}
             />
           </Box>  {/* logo main */}
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }} className="">
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -119,6 +119,7 @@ function ResponsiveAppBar() {
               style={{ objectFit: "contain" }}
             />
           </Box>  {/* logo resp */}
+          
 
           <Box
             sx={{
@@ -127,7 +128,7 @@ function ResponsiveAppBar() {
               alignItems: "center", // Align items vertically centered
               justifyContent: "flex-end", // Align items to the left
             }}
-            className="muiNav"
+            className="muiNav  animate__animated animate__fadeInRight"
           >
             <div onClick={handleCloseNavMenu} className="muiNav1 mr-5">
               {/* {page} */}
@@ -162,7 +163,7 @@ function ResponsiveAppBar() {
             {/* // ))} */}
           </Box> {/* main menu */}
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0 }} className="animate__animated animate__fadeInRight">
             <Tooltip title="Open settings">
               <div onClick={handleOpenUserMenu}>
                 <i className="fa-regular fa-xl fa-circle-user text-white"></i>
@@ -200,6 +201,8 @@ function ResponsiveAppBar() {
               </div>
             </Menu>
           </Box> {/* user dropdown */}
+
+
         </Toolbar>
       </Container>
     </AppBar>

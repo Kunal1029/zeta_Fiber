@@ -114,7 +114,7 @@ body {
 }
 
 .firstSectionHome {
-  background-image: url("./image/6.png");
+  background-image: url("../image/6.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -131,10 +131,229 @@ p {
 .blurrybglast {
   /* background-color: rgba(16, 27, 89, 0.286) !important;
   background-color: rgba(15, 18, 20, 0.433)!important; */
-  background: linear-gradient(#5680e9aa, #84ceebc4, #5abaeab7, #c1c8e4bd, #8760d0a8) !important;
+  background: linear-gradient(
+    #5680e9aa,
+    #84ceebc4,
+    #5abaeab7,
+    #c1c8e4bd,
+     #8760d0a8
+  ) !important;
 }
-.subContainer{
+.subContainer {
   width: 85vw;
   margin: auto;
 }
 
+/* service animation */
+/* .service_section{
+  scroll-: ;
+} */
+
+/* animations */
+
+.box1 {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+.box2 {
+  opacity: 0;
+  /* transform: translateY(-100%); */
+
+  transition: all 0.9s ease-out;
+}
+.box3 {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+.myAnimLeft {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* animation end */
+
+/* register */
+
+.parent-div {
+  /* background-image: url("https://img.freepik.com/premium-photo/grainy-gradient-background-red-white-blue-colors-with-soft-faded-watercolor-border-texture_927344-24167.jpg?semt=ais_hybrid"); */
+  background-image: url("../image/6.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.child-div .real-content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-one {
+  /* padding-top: 8rem; */
+  /* justify-content: center; */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: transparent;
+  box-shadow: -2px 4px 14px rgba(30, 30, 8, 0.653);
+  color: var(--primary-color);
+}
+
+.section-one .section-one-element {
+  margin-top: 8rem;
+}
+
+.section-two {
+  /* padding-top: 8rem; */
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: white;
+  box-shadow: 2px 4px 14px rgba(30, 30, 8, 0.653);
+}
+
+.section-two h2 {
+  padding-top: 4rem;
+  /* padding-left: 5rem; */
+  font-weight: bold;
+}
+
+.account-already h5 {
+  padding-top: 4.4rem;
+  font-size: 18px;
+  color: rgba(102, 0, 255, 0.752);
+}
+
+.account-already-mobile {
+  display: none;
+}
+
+.account-already-mobile h5 {
+  font-size: 12px;
+  color: rgba(102, 0, 255, 0.752);
+  padding: 2% 11% 0 11%;
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 1.8rem;
+  justify-content: center;
+  gap: 20px;
+}
+
+.login-or {
+  text-align: center;
+}
+
+.form-container {
+  width: 80%;
+}
+
+.form-container input {
+  height: 3.5rem;
+  border: 1px solid rgba(18, 18, 17, 0.156);
+  border-radius: 14px;
+  /* width: 86%; */
+}
+
+.form-container input::placeholder {
+  font-size: 1rem;
+}
+
+.check-box p {
+  font-size: 18px;
+}
+
+.button-continue {
+  display: flex;
+  justify-content: center;
+}
+.button-continue button {
+  color: white;
+  background-color: rgba(0, 89, 255, 0.856);
+  font-size: 20px;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 20px;
+  margin-right: 8%;
+}
+
+@media (max-width: 767px) {
+  .confirm {
+    margin-top: 0.9rem;
+  }
+
+  .account-already h5 {
+    font-size: 15px;
+  }
+
+  .section-one .section-one-element {
+    margin-top: 2rem;
+  }
+
+  .button-continue button {
+    width: 82%;
+    /* margin-left: 4%; */
+    margin-top: 2%;
+    justify-content: center;
+  }
+  .check-box {
+    display: flex;
+    padding: 0 !important;
+    margin-right: 10%;
+  }
+  .check-box p {
+    font-size: 16px;
+    /* padding-right: 20%; */
+  }
+
+  .child-div .real-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .account-already {
+    display: none;
+  }
+
+  .section-one {
+    box-shadow: none;
+  }
+
+  .account-already-mobile {
+    display: block !important;
+  }
+
+  .check-box p {
+    font-size: 13px;
+    /* padding-right: 20%; */
+  }
+}
+
+@media (max-width: 1200px) {
+  .nice {
+    display: none;
+  }
+
+  .section-two {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .section-one {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+}
+
+/* register end */
