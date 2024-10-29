@@ -5,13 +5,14 @@ import { usernameValidate } from "../helper/Validate";
 import { useAuthStore } from "../../store/store.js";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { styled, CloudUploadIcon, Button } from "../imports/MuiImports.js";
 
 function UserName() {
   const navigate = useNavigate();
   const setUsername = useAuthStore((state) => state.setUsername);
   const [loading, setLoading] = useState(false);
 
-  const formik = useFormik({
+  const formik = useFormik({ 
     initialValues: {
       username: "",
     },
@@ -28,25 +29,59 @@ function UserName() {
   });
 
   return (
-    <div className="ModalCard ">
-      <div className="card mb-3 m-auto formCard col-md-8" >
-        <div className="row g-0">
-          <div className="col-md-4">
-            <img src="./image/FL.png" className="img-fluid rounded-start w-50" alt="..." />
-            <h2>Welcome Back</h2>
-            <p>Please login to continue</p>
+    <div className="parent-div container-fluid bg-danger mt-5">
+      <Toaster position="top-center" reverseOrder={false}></Toaster>
+      <div className="child-div container">
+        <br />
+        <br />
+        <br />
+
+        <div className="row real-content">
+          <div className="col-xl-5 section-one">
+            <h2 className="section-one-element">
+              <img src="./image/FL.png" alt="" className="w-25" />
+            </h2>
+            <h5>ZetaOne</h5>
+            <h3 style={{ fontWeight: "500" }} className="nice mt-5">
+              Welcome Back
+            </h3>
           </div>
-          
-          <div className="col-md-8">
-            <div className="card-body">
-              {/* <h5 className="card-title">Card title</h5> */}
-              <p className="card-text">
-                <div className="text-white">
-                  {/* <Header /> */}
-                  <Toaster position="top-center" reverseOrder={false}></Toaster>
-                  <h1>Login</h1>
-                  
-                  <form className="" onSubmit={formik.handleSubmit}>
+
+          <div className="col-xl-7 section-two">
+            {/* <!-- Subsection start --> */}
+            <div className="row" style={{ padding: "0% 11% 0% 11%" }}>
+              <div className="col-sm-6">
+                <h2>Login</h2>
+              </div>
+              <div className="col-sm-6 account-already">
+                <h5>
+                  <i className="fa-solid fa-arrow-right"></i> Not Register ?{" "}
+                  <Link className="text-danger" to={"/register"}>
+                    Register
+                  </Link>
+                </h5>
+              </div>
+            </div>
+            {/* <!-- Subsection end --> */}
+
+            <div className="social-icons mt-5">
+              <div>
+                <i className="fa-brands fa-facebook fa-xl text-primary"></i>
+              </div>
+              <div>
+                <i className="fa-brands fa-google fa-xl text-danger"></i>
+              </div>
+            </div>
+
+            <h6 className="login-or mt-4 text-dark">
+              <p className="line"></p>
+              Or login with email
+              <p className="line"></p>
+            </h6>
+
+            <div className="container form-container">
+              
+            <form className="" onSubmit={formik.handleSubmit}>
                     <div className="mb-3 ">
                       <input
                         type="text"
@@ -78,18 +113,33 @@ function UserName() {
                     </button>
                   </form>
 
-                  <h5>
-                    Not a Member?{" "}
-                    <Link className="text-danger" to={"/register"}>
-                      Register
-                    </Link>
-                  </h5>
-                </div>
-              </p>
+              {/* <!-- mobil size --> */}
+              <div className="col-sm-6 account-already-mobile">
+                <h5>
+                  <i className="fa-solid fa-arrow-right"></i> Already have an
+                  account?{" "}
+                  <Link className="text-danger" to={"/login"}>
+                    Login
+                  </Link>
+                </h5>
+              </div>
+              {/* <!-- mobil size end --> */}
+
+              {/* <h5>
+                Already Registered?{" "}
+                <Link className="text-danger" to={"/login"}>
+                  Login
+                </Link>
+              </h5> */}
             </div>
+
+            <div className="mt-5"></div>
           </div>
         </div>
       </div>
+      <br />
+      <br />
+      <br />
     </div>
   );
 }

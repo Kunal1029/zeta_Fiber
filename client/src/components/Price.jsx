@@ -1,17 +1,18 @@
 // import Header from "./Header/Header";
+import { Button } from "./imports/MuiImports";
 
 function Price() {
   return (
     <div>
       {/* <!-- price section --> */}
      
-      <section className="price_section layout_padding">
-        <div className="container">
+     <section className="price_section layout_padding  firstSectionHome">
+        <div className="subContainer  ">
           <div className="heading_container heading_center">
-            <h2>Our Pricing</h2>
+            <h2>Our Services</h2>
           </div>
-          <div className="price_container ">
-            <div className="box">
+          <div className="price_container">
+            <div className="box   ">
               <div className="detail-box">
                 <h2>
                   $ <span>49</span>
@@ -27,10 +28,12 @@ function Price() {
                 </ul>
               </div>
               <div className="btn-box">
-                <a href="">See Detail</a>
+                <Button variant="contained" className="">
+                  See Detail
+                </Button>
               </div>
             </div>
-            <div className="box">
+            <div className="box  ">
               <div className="detail-box">
                 <h2>
                   $ <span>99</span>
@@ -46,10 +49,12 @@ function Price() {
                 </ul>
               </div>
               <div className="btn-box">
-                <a href="">See Detail</a>
+                <Button variant="contained" className="">
+                  See Detail
+                </Button>
               </div>
             </div>
-            <div className="box">
+            <div className="box  ">
               <div className="detail-box">
                 <h2>
                   $ <span>149</span>
@@ -65,7 +70,9 @@ function Price() {
                 </ul>
               </div>
               <div className="btn-box">
-                <a href="">See Detail</a>
+                <Button variant="contained" className="">
+                  See Detail
+                </Button>
               </div>
             </div>
           </div>

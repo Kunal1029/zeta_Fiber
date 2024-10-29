@@ -1,27 +1,29 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from "react";
-import { zetaPlans } from "./priceCardData";
-import Button from "@mui/material/Button";
-import List from "@mui/material/List";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import Collapse from "@mui/material/Collapse";
-import ExpandLess from "@mui/icons-material/ExpandLess";
-import ExpandMore from "@mui/icons-material/ExpandMore";
-import AllInclusiveIcon from "@mui/icons-material/AllInclusive";
-import FactCheckIcon from "@mui/icons-material/FactCheck";
-import ExpandCircleDownSharpIcon from "@mui/icons-material/ExpandCircleDownSharp";
-import NetworkCheckIcon from "@mui/icons-material/NetworkCheck";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { useTheme } from "@mui/material/styles";
-import MobileStepper from "@mui/material/MobileStepper";
-import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
-import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+import {
+  List,
+  Button,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Collapse,
+  ExpandLess,
+  ExpandMore,
+  AllInclusiveIcon,
+  FactCheckIcon,
+  ExpandCircleDownSharpIcon,
+  NetworkCheckIcon,
+  ArrowBackIosIcon,
+  ArrowForwardIosIcon,
+  useTheme,
+  MobileStepper,
+  KeyboardArrowLeft,
+  KeyboardArrowRight,
+} from "./imports/MuiImports";
 
 import "../App.css";
 import BuyModal from "./BuyModal";
+import { useState, useEffect } from "react";
+import { zetaPlans } from "./priceCardData";
 
 const PriceSlide = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -68,7 +70,6 @@ const PriceSlide = () => {
   const totalPages = Math.ceil(zetaPlans.length);
 
   return (
-
     <div className="card3 mb-5 ">
       <div className="carousel-container">
         <div className="carousel-inner mb-5">

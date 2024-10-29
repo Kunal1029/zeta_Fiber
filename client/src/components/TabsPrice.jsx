@@ -1,7 +1,5 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+import { Box, Tabs, Tab } from "./imports/MuiImports";
 import PriceSlide from "./PriceSlide";
 
 export default function TabsPrice() {
@@ -10,7 +8,7 @@ export default function TabsPrice() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  
+
   return (
     <Box sx={{ width: "100%" }} className="glass ">
       <Tabs value={value} onChange={handleChange} centered className="mb-5">
@@ -22,7 +20,7 @@ export default function TabsPrice() {
       <div className="mt-5">
         {value === 0 ? (
           <>
-             <h1 className="mb-5">Zeta Fiber</h1>
+            <h1 className="mb-5">Zeta Fiber</h1>
             <PriceSlide />
           </>
         ) : value === 1 ? (
@@ -32,7 +30,7 @@ export default function TabsPrice() {
           </>
         ) : value === 2 ? (
           <>
-             <h1 className="mb-5">Other</h1>
+            <h1 className="mb-5">Other</h1>
             <PriceSlide />
           </>
         ) : (

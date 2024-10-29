@@ -10,7 +10,6 @@ import Tooltip from "@mui/material/Tooltip";
 import { Link } from "react-router-dom";
 import "../../App.css";
 
-
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -31,8 +30,8 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="fixed" className="appBar px-5 animate__animated animate__fadeInDown">
-      <Container maxWidth="xl" >
+    <div className="appBar animate__animated animate__fadeInDown ">
+      <Container>
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
@@ -44,9 +43,12 @@ function ResponsiveAppBar() {
               className="d-inline-block align-text-top animate__animated animate__fadeInLeft"
               style={{ objectFit: "contain" }}
             />
-          </Box>  {/* logo main */}
-
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }} className="">
+          </Box>{" "}
+          {/* logo main */}
+          <Box
+            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+            className=""
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -104,10 +106,10 @@ function ResponsiveAppBar() {
                 </ul>
               </div>
             </Menu>
-          </Box> {/* menu resp */}
-
+          </Box>{" "}
+          {/* menu resp */}
           <Box
-            noWrap
+            // noWrap
             sx={{ display: { xs: "flex", md: "none" }, mr: 1, flexGrow: 1 }}
           >
             <img
@@ -118,9 +120,8 @@ function ResponsiveAppBar() {
               className="d-inline-block align-text-top"
               style={{ objectFit: "contain" }}
             />
-          </Box>  {/* logo resp */}
-          
-
+          </Box>{" "}
+          {/* logo resp */}
           <Box
             sx={{
               flexGrow: 1,
@@ -161,9 +162,12 @@ function ResponsiveAppBar() {
               </ul>
             </div>
             {/* // ))} */}
-          </Box> {/* main menu */}
-
-          <Box sx={{ flexGrow: 0 }} className="animate__animated animate__fadeInRight">
+          </Box>{" "}
+          {/* main menu */}
+          <Box
+            sx={{ flexGrow: 0 }}
+            className="animate__animated animate__fadeInRight"
+          >
             <Tooltip title="Open settings">
               <div onClick={handleOpenUserMenu}>
                 <i className="fa-regular fa-xl fa-circle-user text-white"></i>
@@ -200,12 +204,95 @@ function ResponsiveAppBar() {
                 </ul>
               </div>
             </Menu>
-          </Box> {/* user dropdown */}
-
-
+          </Box>{" "}
+          {/* user dropdown */}
         </Toolbar>
       </Container>
-    </AppBar>
+    </div>
   );
 }
 export default ResponsiveAppBar;
+
+<nav className="navbar navbar-expand-lg bg-body-tertiary">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="#">
+      <img
+        src="./image/FL.png"
+        alt="Logo"
+        width="170"
+        height="85"
+        className=" d-inline-block align-text-top"
+      />
+    </a>
+    <button
+      className="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    
+    <div className="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul className="navbar-nav ml-auto">
+        <li className="nav-item active">
+          <Link to={"/"} className="nav-link">
+            Home <span className="sr-only">(current)</span>
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to={"/about"} className="nav-link">
+            About
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to={"/service"} className="nav-link">
+            Services
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to={"/price"} className="nav-link">
+            Plans
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to={"/contact"} className="nav-link">
+            Contact Us
+          </Link>
+        </li>
+
+        <li className="nav-item dropdown">
+          <a
+            className="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Dropdown link
+          </a>
+          <ul className="dropdown-menu">
+            <li>
+              <a className="dropdown-item" href="#">
+                Action
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Another action
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Something else here
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,16 +1,21 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
-import * as React from "react";
-import PropTypes from "prop-types";
-import Backdrop from "@mui/material/Backdrop";
-import Box from "@mui/material/Box";
-import Modal from "@mui/material/Modal";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import { useSpring, animated } from "@react-spring/web";
-import UserName from "./UserCredential/UserName";
 
+import {
+  React,
+  PropTypes,
+  Backdrop,
+  Box,
+  Modal,
+  Button,
+  Typography,
+  useSpring,
+  animated,
+} from "./imports/MuiImports";
+
+// import UserName from "../UserCredential/UserName";
+import UserName from "./UserCredential/UserName"
 
 const Fade = React.forwardRef(function Fade(props, ref) {
   const {
@@ -69,7 +74,7 @@ export default function BuyModal({ amount, onOpenModal, onCloseModal }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
     setOpen(true);
-    onOpenModal();  // Pause the slider when modal opens
+    onOpenModal(); // Pause the slider when modal opens
   };
 
   const handleClose = () => {
@@ -92,7 +97,7 @@ export default function BuyModal({ amount, onOpenModal, onCloseModal }) {
         Buy Now
       </Button>
       <Modal
-       className=""
+        className=""
         aria-labelledby="spring-modal-title"
         aria-describedby="spring-modal-description"
         open={open}
@@ -105,12 +110,11 @@ export default function BuyModal({ amount, onOpenModal, onCloseModal }) {
           },
         }}
       >
-        <Fade in={open} >
-          <Box sx={style}  className="ModalCard">
+        <Fade in={open}>
+          <Box sx={style} className="ModalCard">
             <Typography id="spring-modal-description" sx={{ mt: 2 }}>
               {amount}
               <UserName />
-              
             </Typography>
           </Box>
         </Fade>

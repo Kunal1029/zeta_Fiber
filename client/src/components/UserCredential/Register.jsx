@@ -1,3 +1,5 @@
+import { styled, CloudUploadIcon, Button } from "../imports/MuiImports.js";
+
 import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
@@ -53,8 +55,20 @@ function Register() {
     setFile(base64);
   };
 
+  const VisuallyHiddenInput = styled("input")({
+    clip: "rect(0 0 0 0)",
+    clipPath: "inset(50%)",
+    height: 1,
+    overflow: "hidden",
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    whiteSpace: "nowrap",
+    width: 1,
+  });
+
   return (
-    <div className="parent-div container-fluid bg-danger">
+    <div className="parent-div container-fluid bg-danger mt-5">
       <Toaster position="top-center" reverseOrder={false}></Toaster>
       <div className="child-div container">
         <br />
@@ -67,7 +81,7 @@ function Register() {
               <img src="./image/FL.png" alt="" className="w-25" />
             </h2>
             <h5>ZetaOne</h5>
-            <h3 style={{fontWeight: "500"}} className="nice mt-5">
+            <h3 style={{ fontWeight: "500" }} className="nice mt-5">
               Nice to meet you
             </h3>
             <h5 className="nice">Just register to join with us</h5>
@@ -75,14 +89,16 @@ function Register() {
 
           <div className="col-xl-7 section-two">
             {/* <!-- Subsection start --> */}
-            <div className="row" style={{padding: "0% 11% 0% 11%"}}>
+            <div className="row" style={{ padding: "0% 11% 0% 11%" }}>
               <div className="col-sm-6">
                 <h2>Register</h2>
               </div>
               <div className="col-sm-6 account-already">
                 <h5>
-                  <i className="fa-solid fa-arrow-right"></i> Already have an
-                  account?
+                  <i className="fa-solid fa-arrow-right"></i> Have an account?{" "}
+                  <Link className="text-danger" to={"/login"}>
+                    Login
+                  </Link>
                 </h5>
               </div>
             </div>
@@ -106,7 +122,7 @@ function Register() {
             <div className="container form-container">
               <form
                 className="mt-4"
-                style={{padding: "0% 11% 0% 11%"}}
+                style={{ padding: "0% 11% 0% 11%" }}
                 onSubmit={formik.handleSubmit}
               >
                 <div className="text-center mb-3">
@@ -118,12 +134,21 @@ function Register() {
                     />
                   </label>
 
-                  <input
-                    onChange={onUpload}
-                    type="file"
-                    id="profile"
-                    name="profile"
-                  />
+                  <Button
+                    component="label"
+                    role={undefined}
+                    variant="contained"
+                    tabIndex={-1}
+                    startIcon={<CloudUploadIcon />}
+                  >
+                    Profile Image
+                    <VisuallyHiddenInput
+                      onChange={onUpload}
+                      type="file"
+                      id="profile"
+                      multiple
+                    />
+                  </Button>
                 </div>
 
                 <input
@@ -212,9 +237,32 @@ function Register() {
                   </div>
                 </div>
 
-                <button type="submit" className="btn btn-outline-warning">
-                  Sign Up
-                </button>
+                <div
+                  className="row mt-4 last-section"
+                 
+                >
+                  <div className="col-md-6">
+                    <div
+                      className="check-box"
+                      // style={{ padding: "0% 0% 0% 11%", display: "flex", gap:"-10px" }}
+                    >
+                      <input
+                        style={{ width: "6%", height: "1.1rem" }}
+                        className="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                      <span>Terms & Condition</span>
+                    </div>
+                  </div>
+
+                  <div className="col-md-6 ">
+                    <Button variant="contained" type="submit" className="">
+                      SignUp
+                    </Button>
+                  </div>
+                </div>
               </form>
 
               {/* <!-- mobil size --> */}
@@ -229,44 +277,12 @@ function Register() {
               </div>
               {/* <!-- mobil size end --> */}
 
-              {/* <!-- button section start --> */}
-              <div
-                className="row mt-4 last-section"
-                style={{padding: "0% 0% 0% 6%"}}
-              >
-                <div className="col-md-6">
-                  <div
-                    className="check-box"
-                    style={{padding: "0% 0% 0% 11%", display: "flex"}}
-                  >
-                    <input
-                      style={{width: "6%", height: "1.1rem"}}
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckDefault"
-                    />
-                    <p>
-                      Accept the Terms of Service & Privacy
-                      Policy *
-                    </p>
-                    
-                  </div>
-                </div>
-
-                <div className="col-md-6 button-continue">
-                  <button className="btn">continue</button>
-                </div>
-                
-              </div>
-              {/* <!-- button section end --> */}
-
-              <h5>
+              {/* <h5>
                 Already Registered?{" "}
                 <Link className="text-danger" to={"/login"}>
                   Login
                 </Link>
-              </h5>
+              </h5> */}
             </div>
 
             <div className="mt-5"></div>

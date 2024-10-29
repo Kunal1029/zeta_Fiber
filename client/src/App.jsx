@@ -22,8 +22,8 @@ import ResponsiveAppBar from "./components/Header/ResponsiveAppBar";
 function App() {
   return (
     <BrowserRouter>
-    {/* <Header /> */}
-    <ResponsiveAppBar  />
+    <Header />
+    {/* <ResponsiveAppBar  /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

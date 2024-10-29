@@ -3,19 +3,20 @@ import "../../App.css";
 // import UpperHeader from "./UpperHeader";
 
 function Header() {
+
   return (
-    <div>
+    <div className="">
       {/* <!-- header section strats --> */}
       {/* <UpperHeader/> */}
-      <header className="header_section bg-light">
+      <header className="header_section fixed-top">
         <div className="container">
           <nav className="navbar navbar-expand-lg custom_nav-container">
             <a className="navbar-brand image-container" href="index.html">
               <img
                 src="./image/FL.png"
                 alt="Logo"
-                width="170"
-                height="85"
+                width="150"
+                height="65"
                 className=" d-inline-block align-text-top"
               />
             </a>
@@ -36,7 +37,7 @@ function Header() {
               className="collapse navbar-collapse "
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav ml-auto Headermenu">
+              <ul className="navbar-nav ml-auto">
                 <li className="nav-item active">
                   <Link to={"/"} className="nav-link">
                     Home <span className="sr-only">(current)</span>
@@ -62,41 +63,41 @@ function Header() {
                     Contact Us
                   </Link>
                 </li>
+
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    data-toggle="collapse"
+                    data-target="#ks"
+                    aria-controls="ks"
+                    // onClick={toggleProfileDropDown}
+                  >
+                    Profile
+                  </a>
+                  <ul className="dropdown-menu" id="ks">
+                    <li>
+                      <a className="dropdown-item" href="#">
+                        <Link to={"/login"}  className="text-dark">Login</Link>
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item " href="#">
+                        <Link to={"/register"} className="text-dark">Register</Link>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                </li>
               </ul>
-              {/* Login start */}
-
-              {/* <div>
-                <p className="text-danger mt-3"></p>
-              </div> */}
-
-              {/* <!-- Example single danger button --> */}
-              {/* <div className="userDD">
-                <button
-                  type="button"
-                  className="btn"
-                >
-                  <i className="fa-regular fa-xl fa-circle-user" style={{color:"#003E87"}}></i>
-                  <i className="fa-solid fa-caret-down"></i>
-                </button>
-                <ul className="">
-                  <li>
-                    <Link to={"/login"}>Login</Link>
-                  </li>
-
-                  <li  className="mt-1">
-                    <Link to={"/register"}>Register</Link>
-                  </li>
-                </ul>
-              </div> */}
-
-              
             </div>
           </nav>
         </div>
       </header>
       {/* <!-- end header section --> */}
-
-      
     </div>
   );
 }

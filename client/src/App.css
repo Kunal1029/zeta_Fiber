@@ -24,6 +24,7 @@ body {
 .appBar {
   background-color: rgba(0, 0, 0, 0.363) !important;
   /* background-color: rgba(15, 18, 20, 0.262)!important; */
+  /* height: 100px; */
 }
 .muiDD ul {
   /* border: 2px saddlebrown solid; */
@@ -111,6 +112,13 @@ body {
 }
 .formCard {
   background-color: rgba(160, 64, 64, 0.306);
+}
+.firstSectionHome1{
+  background-image: url("../image/bg1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .firstSectionHome {

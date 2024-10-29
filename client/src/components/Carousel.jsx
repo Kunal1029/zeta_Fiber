@@ -1,19 +1,23 @@
 /* eslint-disable react/prop-types */
+
+import {
+  Button,
+  Stack,
+  List,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Collapse,
+  ExpandLess,
+  ExpandMore,
+  AllInclusiveIcon,
+  FactCheckIcon,
+  ExpandCircleDownSharpIcon,
+  NetworkCheckIcon,
+} from "./imports/MuiImports";
+
 import { useState } from "react";
-import { zetaPlans } from "./priceCardData"; // Assuming zetaPlans contains data
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
-import List from "@mui/material/List";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import Collapse from "@mui/material/Collapse";
-import ExpandLess from "@mui/icons-material/ExpandLess";
-import ExpandMore from "@mui/icons-material/ExpandMore";
-import AllInclusiveIcon from "@mui/icons-material/AllInclusive";
-import FactCheckIcon from "@mui/icons-material/FactCheck";
-import ExpandCircleDownSharpIcon from "@mui/icons-material/ExpandCircleDownSharp";
-import NetworkCheckIcon from "@mui/icons-material/NetworkCheck";
+import { zetaPlans } from "./priceCardData";
 import Carousel from "react-material-ui-carousel";
 import "../App.css";
 
@@ -61,7 +65,10 @@ function Card({ item }) {
   };
 
   return (
-    <div className="card m-auto CIT border-0 mb-3" style={{ maxWidth: "18rem" }}>
+    <div
+      className="card m-auto CIT border-0 mb-3"
+      style={{ maxWidth: "18rem" }}
+    >
       <div className="card-header mb-4 bg-transparent  w-75 m-auto">
         <span>
           <NetworkCheckIcon /> {item.speed}
