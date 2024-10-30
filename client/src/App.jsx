@@ -17,7 +17,8 @@ import 'animate.css';
 // auth middleware
 import { AuthorizeUser , ProtectRoute} from "./middleware/auth";
 import Header from "./components/Header/Header";
-import ResponsiveAppBar from "./components/Header/ResponsiveAppBar";
+// import ResponsiveAppBar from "./components/Header/ResponsiveAppBar";
+import Cards from "./components/cards/Cards";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/service" element={<Service />} />
         <Route path="/price" element={<Price />} />
+        <Route path="/card" element={<Cards />} />
 
         {/* user credential */}
         <Route path='/login' element={<UserName />} />

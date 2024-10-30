@@ -6,7 +6,7 @@ function Price() {
     <div>
       {/* <!-- price section --> */}
      
-     <section className="price_section layout_padding  firstSectionHome">
+     <section className="price_section layout_padding  ">
         <div className="subContainer  ">
           <div className="heading_container heading_center">
             <h2>Our Services</h2>

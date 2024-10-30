@@ -6,7 +6,7 @@ function Contact() {
   return (
     <div>
    
-   <section className="contact_section layout_padding-bottom  firstSectionHome">
+   <section className="contact_section layout_padding-bottom ">
         <div className="container    ">
           <div className="heading_container heading_center">
             <h2 className=" ">Get In Touch</h2>

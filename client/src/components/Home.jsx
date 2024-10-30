@@ -52,7 +52,7 @@ function Home() {
         </section>
       </div>
 
-      <section className="service_section layout_padding firstSectionHome">
+      <section className="service_section layout_padding ">
         <div className={`container mb-5    `}>
           <div className="heading_container heading_center">
             <h2>Our Plans</h2>
@@ -76,7 +76,7 @@ function Home() {
 
       {/* <!-- server section --> */}
 
-      <section className="server_section  firstSectionHome">
+      <section className="server_section  ">
         <div className="subContainer     ">
           <div className="row">
             <div className="col-md-6">

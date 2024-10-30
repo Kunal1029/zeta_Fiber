@@ -1,8 +1,10 @@
+import Cards from "./cards/Cards";
+
 function Testimonial() {
   return (
     <div>
       {/* <!-- client section --> */}
-      <section className="client_section  firstSectionHome">
+      <section className="client_section  ">
         <div className="subContainer   ">
           <div className="heading_container heading_center">
             <h2 className=" ">Testimonial</h2>
@@ -146,8 +148,16 @@ function Testimonial() {
         </div>
       </section>
       {/* <!-- end client section --> */}
+
+      <div>
+        <h1 className="mb-3" style={{ textAlign: "center", marginTop: "20px" }}>
+          Our Mission & Vision
+        </h1>
+
+        <Cards />
+      </div>
     </div>
-  )
+  );
 }
 
-export default Testimonial
+export default Testimonial;
