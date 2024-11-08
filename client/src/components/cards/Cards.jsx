@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+
 import "./Cards.css"; // Import custom styles
 import { useEffect, useRef } from "react";
 import { throttle } from "lodash";
