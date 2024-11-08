@@ -5,11 +5,11 @@ import "../../App.css";
 function Header() {
 
   return (
-    <div className="">
+    <div className=" subcontainer ">
       {/* <!-- header section strats --> */}
       {/* <UpperHeader/> */}
       <header className="header_section fixed-top">
-        <div className="container">
+        <div className="border subcontainer " >
           <nav className="navbar navbar-expand-lg custom_nav-container">
             <a className="navbar-brand image-container" href="index.html">
               <img

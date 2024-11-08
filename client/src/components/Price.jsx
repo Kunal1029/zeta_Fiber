@@ -5,8 +5,8 @@ function Price() {
   return (
     <div>
       {/* <!-- price section --> */}
-     
-     <section className="price_section layout_padding  ">
+
+      <section className="price_section layout_padding  ">
         <div className="subContainer  ">
           <div className="heading_container heading_center">
             <h2>Our Services</h2>
@@ -15,7 +15,7 @@ function Price() {
             <div className="box   ">
               <div className="detail-box">
                 <h2>
-                  $ <span>49</span>
+                  <span>49</span>
                 </h2>
                 <h6>Startup</h6>
                 <ul className="price_features">
@@ -27,16 +27,11 @@ function Price() {
                   <li>24/7/365 Tech Support</li>
                 </ul>
               </div>
-              <div className="btn-box">
-                <Button variant="contained" className="">
-                  See Detail
-                </Button>
-              </div>
             </div>
             <div className="box  ">
               <div className="detail-box">
                 <h2>
-                  $ <span>99</span>
+                  <span>99</span>
                 </h2>
                 <h6>Standard</h6>
                 <ul className="price_features">
@@ -48,16 +43,11 @@ function Price() {
                   <li>24/7/365 Tech Support</li>
                 </ul>
               </div>
-              <div className="btn-box">
-                <Button variant="contained" className="">
-                  See Detail
-                </Button>
-              </div>
             </div>
             <div className="box  ">
               <div className="detail-box">
                 <h2>
-                  $ <span>149</span>
+                  <span>149</span>
                 </h2>
                 <h6>Business</h6>
                 <ul className="price_features">
@@ -69,13 +59,28 @@ function Price() {
                   <li>24/7/365 Tech Support</li>
                 </ul>
               </div>
-              <div className="btn-box">
-                <Button variant="contained" className="">
-                  See Detail
-                </Button>
-              </div>
             </div>
           </div>
+        </div>
+
+        <div className="text-center mt-5">
+          <Button
+            variant="contained"
+            sx={{
+              borderRadius: "40px",
+              padding: "10px 24px",
+              "&:hover": {
+                backgroundColor: "primary.dark",
+                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+              },
+              "&:focus": {
+                outline: "none", // Remove the focus ring
+              },
+            }}
+            className="mt-3"
+          >
+            See Details
+          </Button>
         </div>
       </section>
 

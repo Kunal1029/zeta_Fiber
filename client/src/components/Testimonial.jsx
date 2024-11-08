@@ -1,4 +1,6 @@
-import Cards from "./cards/Cards";
+// import Cards from "./cards/Cards";
+
+// import MultiCardsCarousel from "./cards/MultiCardsCarousel";
 
 function Testimonial() {
   return (
@@ -32,8 +34,8 @@ function Testimonial() {
                         <div className="detail-box">
                           <div className="client_info">
                             <div className="client_name">
-                              <h5>Morojink</h5>
-                              <h6>Customer</h6>
+                              <h5>Amit Sharma</h5>
+                              {/* <h6>Customer</h6> */}
                             </div>
                             <i
                               className="fa fa-quote-left"
@@ -41,13 +43,7 @@ function Testimonial() {
                             ></i>
                           </div>
                           <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugia
+                          I switched to 1 Zeta a few months ago, and I couldn’t be happier. The speed is fantastic, and the customer support is very responsive. It’s great to have a reliable internet connection that doesn’t cost a fortune!
                           </p>
                         </div>
                       </div>
@@ -66,8 +62,8 @@ function Testimonial() {
                         <div className="detail-box">
                           <div className="client_info">
                             <div className="client_name">
-                              <h5>Morojink</h5>
-                              <h6>Customer</h6>
+                              <h5> Priya Deshmukh</h5>
+                              {/* <h6>Customer</h6> */}
                             </div>
                             <i
                               className="fa fa-quote-left"
@@ -75,13 +71,7 @@ function Testimonial() {
                             ></i>
                           </div>
                           <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugia
+                          1 Zeta has been a game-changer for my home office setup. The connection is fast and steady, even with multiple devices. I highly recommend them to anyone looking for affordable and quality internet.
                           </p>
                         </div>
                       </div>
@@ -100,8 +90,8 @@ function Testimonial() {
                         <div className="detail-box">
                           <div className="client_info">
                             <div className="client_name">
-                              <h5>Morojink</h5>
-                              <h6>Customer</h6>
+                              <h5>Rajesh Gupta</h5>
+                              {/* <h6>Customer</h6> */}
                             </div>
                             <i
                               className="fa fa-quote-left"
@@ -109,13 +99,8 @@ function Testimonial() {
                             ></i>
                           </div>
                           <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugia
+                          After dealing with inconsistent connections, switching to 1 Zeta has been amazing. The setup was quick, and their customer service team was so helpful. I finally have internet I can rely on.
+
                           </p>
                         </div>
                       </div>
@@ -149,13 +134,15 @@ function Testimonial() {
       </section>
       {/* <!-- end client section --> */}
 
-      <div>
+      {/* <div>
         <h1 className="mb-3" style={{ textAlign: "center", marginTop: "20px" }}>
           Our Mission & Vision
         </h1>
 
         <Cards />
-      </div>
+      </div> */}
+
+      {/* <MultiCardsCarousel /> */}
     </div>
   );
 }

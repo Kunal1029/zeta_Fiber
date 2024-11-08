@@ -222,7 +222,7 @@ function Card({ item, setIsPaused }) {
         <List
           sx={{
             width: "100%",
-            maxWidth: 360,
+            maxWidth: 260,
             bgcolor: "background.paper",
           }}
           component="nav"

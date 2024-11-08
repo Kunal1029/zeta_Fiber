@@ -54,6 +54,7 @@
   .slider_section .detail-box {
     margin-bottom: 45px;
     text-align: center;
+    
   }
 
   .slider_section .detail-box .btn-box {
@@ -75,7 +76,7 @@
 
   .server_section {
     background: none;
-    background-color: #020230;
+    background-color: var(--primary-color);
   }
 
   .server_section .img-box {
@@ -96,7 +97,13 @@
   }
 
   .info_section .info_links {
+    
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
+    gap: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -121,11 +128,22 @@
 
 @media (max-width: 480px) {}
 
-@media (max-width: 420px) {}
+@media (max-width: 420px) {
+  .info_section .info_links {
+   
+    gap: 1rem;
+    font-size: 1rem;
+  }
+}
 
 @media (max-width: 376px) {
   .slider_section .detail_box h1 {
     font-size: 2.5rem;
+  }
+  .info_section .info_links {
+   
+    gap: 0.6rem;
+    font-size: 0.8rem;
   }
 }
 
