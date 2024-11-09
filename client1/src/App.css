@@ -1,0 +1,32 @@
+.wifiabout{
+    display: flex;
+    justify-content: end;
+  }
+
+/* Default navbar behavior (expanded by default on larger screens) */
+.navbar-collapse {
+    max-height: none;
+    opacity: 1;
+    transition: none; /* Disable transitions for larger screens */
+  }
+  
+
+
+@media (max-width:992px) {
+    .wifiabout{
+        display: flex;
+        justify-content: center !important ;
+    }
+    .navbar-collapse {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.3s ease;
+      }
+    
+      .navbar-collapse.show {
+        max-height: 500px;
+        opacity: 1;
+      }
+     
+}

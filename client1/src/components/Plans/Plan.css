@@ -1,0 +1,9 @@
+.myplans {
+    position: relative;
+    background-image: url(../assets/images/home.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* height: 100vh; Ensures the background image and color take up full viewport height */
+}
+
