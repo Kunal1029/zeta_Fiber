@@ -1,5 +1,5 @@
 .myMap iframe{
-    width: 100%;
+    width: 90%;
     height: 90%;
     
 }
@@ -12,6 +12,9 @@
 }
 
 @media (max-width:992px) {
+    .myMap{
+        text-align: center;
+    }
     .myMap iframe{
         height: 500px;
         width: 90%;

@@ -9,19 +9,19 @@ const testimonialData = [
     id: 1,
     text: "I switched to 1 Zeta a few months ago, and I couldn’t be happier. The speed is fantastic, and the customer support is very responsive. It’s great to have a reliable internet connection that doesn’t cost a fortune!",
     name: "Amit Sharma",
-    image: "./assets/images/testimonial-1.jpg", // Add your image or remove if not required
+    image: "./assets/images/amit.png", // Add your image or remove if not required
   },
   {
     id: 2,
     text: "1 Zeta has been a game-changer for my home office setup. The connection is fast and steady, even with multiple devices. I highly recommend them to anyone looking for affordable and quality internet.",
     name: "Priya Deshmukh",
-    image: "./assets/images/testimonial-2.jpg", // Add your image or remove if not required
+    image: "./assets/images/priya.png", // Add your image or remove if not required
   },
   {
     id: 3,
     text: "After dealing with inconsistent connections, switching to 1 Zeta has been amazing. The setup was quick, and their customer service team was so helpful. I finally have internet I can rely on.",
     name: "Rajesh Gupta",
-    image: "./assets/images/testimonial-3.jpg", // Add your image or remove if not required
+    image: "./assets/images/rajesh.png", // Add your image or remove if not required
   },
 ];
 
@@ -61,6 +61,9 @@ export default function Testimonial() {
 
   return (
     <div>
+  
+  {/* <div style={{width:"100%",height:"500px"}} data-fillout-id="vfWhSgknCPus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div><script src="https://server.fillout.com/embed/v1/"></script> */}
+
       <div className="slider-1 testimonial text-light d-flex align-items-center">
         <div className="container">
           <div className="row">

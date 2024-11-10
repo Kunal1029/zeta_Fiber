@@ -77,7 +77,7 @@ function Contact() {
             </div>
             {/* <!-- end of col --> */}
             <div
-              className="col-lg-6 text-center myMap "
+              className="col-lg-6  myMap "
               data-aos="fade-down"
             >
   

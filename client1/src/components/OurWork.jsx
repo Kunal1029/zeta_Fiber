@@ -6,11 +6,11 @@ function OurWork() {
       {/* <!-- Work --> */}
       <section className="work d-flex align-items-center py-5">
         <div className="container-fluid text-light">
-          <div className="row">
-            <div className="col-lg-6 d-flex align-items-center" data-aos="fade-right">
-              <img className="img-fluid" src="./assets/images/work.jpg" alt="work" />
+          <div className="row ">
+            <div className="col-lg-6 ms-auto text-center d-flex align-items-center justify-content-center" data-aos="fade-right">
+              <img className="img-fluid" src="./assets/images/work.png" alt="work" />
             </div>
-            <div className="col-lg-5 d-flex align-items-center px-4 py-3">
+            <div className="col-lg-5 ms-auto d-flex align-items-center px-4 py-3 ">
               <div className="row">
                 <div className="text-center text-lg-start py-4 pt-lg-0">
                   <p>OUR WORK</p>

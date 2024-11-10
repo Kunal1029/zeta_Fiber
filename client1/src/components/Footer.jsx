@@ -1,3 +1,5 @@
+// import Gradient from "./Animation/Gradient"
+
 function Footer() {
   return (
     <div>
@@ -8,6 +10,7 @@ function Footer() {
             <div className="col-lg-4 py-4 py-md-5">
               <div className="d-flex align-items-center">
                 <h4 className="">ZetaOne</h4>
+                {/* <Gradient /> */}
               </div>
               <p className="py-3 para-light">
                 Bhanot Market, 1 Turner Road, Majra, Dehradun, Uttarakhand -

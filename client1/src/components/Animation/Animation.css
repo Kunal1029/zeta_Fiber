@@ -35,3 +35,156 @@
     }
   }
   
+/* ripple */
+
+/* .Mywrap {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+} */
+
+.ripplebutton {
+  background: var(--secondary-color);
+  cursor: pointer;
+  /* border: 1px solid white; */
+  color: var(--secondary-color);
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 100%;
+  text-transform: uppercase;
+  font-family: 'Muli-LightItalic', Helvetica;
+  font-size: 20px;
+  line-height: 10px;
+  animation: ripple 1.5s linear infinite;
+  transition: all 0.7s ease;
+}
+
+.ripplebutton:hover {
+  transform: scale(1.1);
+}
+
+.ripplebutton:focus {
+  outline: none;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 var(--secondary-color), 
+                0 0 0 1px var(--secondary-color), 
+                0 0 0 3px var(--secondary-color), 
+                0 0 0 5px var(--secondary-color);
+  }
+  100% {
+    box-shadow: 0 0 0 0 var(--secondary-color), 
+                0 0 0 1px var(--secondary-color), 
+                0 0 0 10px rgba(255, 255, 255, 0), 
+                0 0 0 20px rgba(255, 255, 255, 0);
+  }
+}
+
+/* ripple end */
+
+
+/* Gradient animation */
+/* Define a custom property with Houdini API */
+@property --Gradientprogress {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+:root {
+  --c1: var(--secondary-color);
+  --c2: white;
+  --c3: var(--primary-light);
+  --c4: var(--primary);
+}
+
+@keyframes Gradientprogress {
+  from {
+    --Gradientprogress: 0%;
+  }
+  to {
+    --Gradientprogress: 100%;
+  }
+}
+
+.Gradientcircle {
+  --Gradientprogress: 60%;
+  /* Check if browser supports Houdini API, then start animation from 0 */
+  @supports (background: paint(houdini)) {
+    --Gradientprogress: 0%;
+  }
+  background: conic-gradient(
+    at center,
+    var(--c1) var(--Gradientprogress),
+    rgba(239, 236, 236, 0.48) var(--Gradientprogress),
+    var(--c2) calc(var(--Gradientprogress) + 20%),
+    var(--c3) calc(var(--Gradientprogress) + 30%),
+    var(--c3) calc(var(--Gradientprogress) + 50%),
+    transparent,
+    transparent,
+    transparent,
+    transparent
+  );
+  animation: Gradientprogress 4s linear infinite;
+  border-radius: 50%;
+  mask: radial-gradient(circle at center, transparent 65%, black 65%);
+  position: absolute;
+  inset: 0;
+}
+
+.Gradientcircle:nth-child(1) {
+  inset: 6vmin;
+}
+.Gradientcircle:nth-child(2) {
+  inset: 8vmin;
+  animation-delay: 1s;
+}
+
+.Gradientcircle:nth-child(3) {
+  inset: 10vmin;
+  animation-delay: 0.5s;
+}
+
+.Gradientcontainer {
+  filter: drop-shadow(0 0 0.8vmin hsla(0, 0%, 0%, 1));
+  position: relative;
+  width: 40vmin;
+  aspect-ratio: 1;
+  /* border: 2px solid white; */
+}
+
+.Gradientcontainer:after {
+  /* content: "@property 🧙‍♂️✨"; */
+  content: "ZetaOne";
+  font-weight: bold;
+  position: absolute;
+  font-size: 2rem;
+  inset: 0;
+  color: white;
+  display: grid;
+  place-items: center;
+}
+
+/* body {
+  height: 100vh;
+  width: 100vw;
+  font-family: Roboto, Inter, "Helvetica Neue", Helvetica, sans-serif;
+  background: radial-gradient(30% 40% at center, hsla(0, 0%, 100%, 0.03), transparent), #111;
+  color: var(--c1);
+  display: grid;
+  place-items: center;
+} */
+
+/* Gradient animation end */
