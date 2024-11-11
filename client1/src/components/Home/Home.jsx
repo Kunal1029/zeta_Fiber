@@ -1,6 +1,8 @@
 import About from "../About/About";
 import Wave from "../Animation/Wave";
+import Company from "../companies/Company";
 import Contact from "../Contact/Contact";
+import FAQs from "../FAQ/FAQs";
 import Hero from "../Hero";
 import MyLocation from "../MyLocation";
 import OurWork from "../OurWork";
@@ -20,11 +22,15 @@ function Home() {
 
       <Services />
 
+      <Company />
+
       <OurWork />
 
       <Wave />
 
       <Testimonial />
+
+      <FAQs />
 
       <Contact />
 

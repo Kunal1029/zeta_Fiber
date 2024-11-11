@@ -188,3 +188,144 @@
 } */
 
 /* Gradient animation end */
+
+
+/* SocialMedia  */
+
+.SMapp {
+  /* min-width: 50vw;
+  min-height: 50vh; */
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  flex-direction: row;
+}
+
+
+.SMHeader { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  /* text-align: center; */
+  
+  h1 {
+    font-weight: 600;
+    font-size: 3rem;
+    /* margin-bottom: 0.5rem; */
+    color: var(--primary);
+    text-align: justify;
+    /* word-spacing: 2px !important; */
+  }
+  
+  p {
+    /* color: #94a3b8; */
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #000;
+  }
+  
+  a {
+    color: var(--primary);
+  }
+}
+
+.SMtag-list {
+  /* width: 20rem; */
+  /* max-width: 90vw; */
+  width: 50%;
+  /* border: 2px saddlebrown solid; */
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 1px;
+  position: relative;
+  /* padding: 1.5rem 0; */
+  overflow: hidden;
+}
+
+.SMloop-slider {
+  .SMinner {
+    display: flex;
+    width: fit-content;
+    animation-name: SMloop;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: var(--duration);
+    /* animation: SMloop var(--duration) ease-in-out infinite; */
+    animation-direction: var(--direction);
+  }
+  /* border: blue 2px solid; */
+  /* width: 50%; */
+  overflow: hidden;
+  /* border: 2px solid red; */
+  width: 100%;
+  
+}
+
+.SMtag {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1px;
+  color: var(--primary);
+  /* color: var(--secondary-color); */
+  font-size: 0.9rem;
+  /* background-color: #334155; */
+  /* background-color: var(--primary); */
+  border-radius: 0.4rem;
+  padding: 0.7rem 1rem;
+  margin-right: 20px; 
+  /* box-shadow: 
+    0 0.1rem 0.2rem rgb(0 0 0 / 20%),
+    0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+    0 0.2rem 1.5rem rgb(0 0 0 / 40%);
+   */
+  span {
+    font-size: 1.2rem;
+    color: #64748b;
+  }
+}
+
+.SMtag span img{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.SMfade {
+  pointer-events: none;
+  background: linear-gradient(90deg, #1e293b, transparent 30%, transparent 70%, #1e293b);
+  /* position: absolute; */
+  inset: 0;
+}
+
+@keyframes SMloop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+    
+  }
+}
+
+
+@media (max-width:992px){
+  .SMapp {
+    /* min-width: 50vw;
+    min-height: 50vh; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .SMtag-list {
+    /* width: 20rem; */
+    /* max-width: 90vw; */
+    width: 100%;
+  }
+}
+
+
+/* SocialMedia end */

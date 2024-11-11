@@ -1,3 +1,4 @@
+// import SocialMedia from "./Animation/SocialMedia";
 
 function Services() {
   return (
@@ -7,7 +8,7 @@ function Services() {
         className="services d-flex align-items-center py-5"
         id="services"
       >
-        <div className="container text-light">
+        <div className="container text-light mt-4 ">
           <div className="text-center pb-4">
             <p>OUR SERVICES</p>
             <h2 className="py-2">Explore unlimited possibilities</h2>
@@ -96,6 +97,10 @@ function Services() {
         {/* <!-- end of container --> */}
       </section>
       {/* <!-- end of services --> */}
+
+      {/* <section className=" border bg-warning">
+        <SocialMedia />
+      </section> */}
     </div>
   );
 }

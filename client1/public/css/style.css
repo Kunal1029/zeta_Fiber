@@ -71,6 +71,7 @@ li {
 .services,
 .plans,
 .work,
+
 .contact {
   height: 110vh;
   position: relative;
@@ -88,6 +89,7 @@ li {
 .plans,
 .company,
 .newsletter,
+.faq,
 .location {
   background-color: var(--primary-light);
 }
@@ -442,6 +444,9 @@ li {
 /********************/
 /*     Services     */
 /********************/
+.services{
+  height: 100%;
+}
 .services .card {
   padding: 20px;
   border-radius: 0;
