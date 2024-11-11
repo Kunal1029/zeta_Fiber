@@ -6,10 +6,10 @@ function MainContact() {
     <div>
     {/* <!-- Contact --> */}
     <section className="contact d-flex align-items-center py-5 " id="contact">
-      <div className="container-fluid contact text-light mt-5">
+      <div className="container-fluid contact text-light mt-2">
         <div className="row myRow mt-5">
           <div
-            className="col-lg-6 mt-5 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5"
+            className="col-lg-6  d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5"
             data-aos="fade-right"
           >
             <div style={{ width: "90%" }}>

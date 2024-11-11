@@ -6,7 +6,7 @@ function About() {
     <div>
       {/* <!-- About --> */}
       <section
-        className="about d-flex align-items-center text-light py-5"
+        className="about d-flex align-items-center text-light  py-5"
         id="about"
       >
         <div className="container">
@@ -50,7 +50,7 @@ function About() {
                   src="./assets/images/about.png"
                   alt="about"
                 /> */}
-                <Network isWifi={true} />
+                <Network isWifi={true}  />
                 {/* <i className="fa-solid fa-wifi"></i> */}
                 
                 {/* </Network> */}

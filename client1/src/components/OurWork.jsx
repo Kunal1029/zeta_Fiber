@@ -4,11 +4,12 @@ function OurWork() {
   return (
     <div>
       {/* <!-- Work --> */}
-      <section className="work d-flex align-items-center py-5">
+      <section className="work d-flex align-items-center py-2">
         <div className="container-fluid text-light">
           <div className="row ">
             <div className="col-lg-6 ms-auto text-center d-flex align-items-center justify-content-center" data-aos="fade-right">
-              <img className="img-fluid" src="./assets/images/work.png" alt="work" />
+              <img className="img-fluid d-lg-block d-none" src="./assets/images/about.png" alt="work" />
+              <img className="img-fluid d-lg-none" src="./assets/images/about.jpg" alt="work" />
             </div>
             <div className="col-lg-5 ms-auto d-flex align-items-center px-4 py-3 ">
               <div className="row">

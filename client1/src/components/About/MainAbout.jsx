@@ -10,7 +10,7 @@ function MainAbout() {
       >
         <div className="container">
           <div className="row d-flex align-items-center">
-            <div className="col-lg-8" data-aos="fade-right">
+            <div className="col-lg-8 mt-5" data-aos="fade-right">
               <p>ABOUT US</p>
               <h1>
                 We are top internet <br />

@@ -52,8 +52,8 @@ const FAQs = () => {
     ]
 
     return (
-        <div className='faq-accordion df'>
-           <div className="faq-accordion-container mb-5"
+        <div className='faq-accordion df '>
+           <div className="faq-accordion-container mb-5 mt-5"
            data-aos="fade-in" data-aos-delay="250" data-aos-duration="500"
            >
                {/* <div className='border col-md-4'>

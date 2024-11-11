@@ -494,6 +494,7 @@ li {
   border-width: 3px;
   margin-left: 1em;
   margin-right: 1em;
+  height: 50vh;
   border-image-source: var(--gradient);
 }
 
@@ -690,7 +691,9 @@ li {
   margin-bottom: 0.5rem;
 }
 
-
+.about{
+  height: 100%;
+}
 
 
 /*************************/
@@ -704,6 +707,18 @@ li {
   .contact,
   .plans {
     height: 100%;
+  }
+}
+
+@media (max-width:768px) {
+  .testimonial-card {
+    height: 45vh;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width:400px) {
+  .testimonial-card {
+    height: 55vh;
   }
 }
 
@@ -834,4 +849,7 @@ li {
 		align-items: center;
 		gap: 0px;
 	}
+  .testimonial-card {
+    height: 60vh;
+  }
 }

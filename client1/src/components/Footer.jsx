@@ -28,17 +28,17 @@ function Footer() {
               <div className="d-flex">
                 <div className="me-3">
                   <a href="#your-link">
-                    <i className="fab fa-facebook-f fa-2x py-2"></i>
+                    <i className="fab fa-facebook-f fa-xl py-2"></i>
                   </a>
                 </div>
                 <div className="me-3">
                   <a href="#your-link">
-                    <i className="fab fa-twitter fa-2x py-2"></i>
+                    <i className="fab fa-twitter fa-xl py-2"></i>
                   </a>
                 </div>
                 <div className="me-3">
-                  <a href="#your-link">
-                    <i className="fab fa-instagram fa-2x py-2"></i>
+                  <a href="https://www.instagram.com/1zetafiber/" target="_blank">
+                    <i className="fab fa-instagram fa-xl py-2"></i>
                   </a>
                 </div>
               </div>
@@ -143,11 +143,8 @@ function Footer() {
       <div className="bottom py-2 text-light">
         <div className="container d-flex justify-content-between">
           <div>
-            <p>Copyright © Your name</p>
+            <p>Copyright ©1zeta</p>
             <br />
-            <p>
-              Distributed by: <a href="https://themewagon.com/">Themewagon</a>
-            </p>
           </div>
           <div>
             <i className="fab fa-cc-visa fa-lg p-1"></i>
