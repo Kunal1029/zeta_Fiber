@@ -3,12 +3,12 @@ import Wave from "../Animation/Wave";
 import Company from "../companies/Company";
 import Contact from "../Contact/Contact";
 import FAQs from "../FAQ/FAQs";
-import Hero from "../Hero";
-import MyLocation from "../MyLocation";
-import OurWork from "../OurWork";
+import Hero from "../OtherComponents/Hero";
+import MyLocation from "../OtherComponents/MyLocation";
+import OurWork from "../OtherComponents/OurWork";
 import Plan from "../Plans/Plan";
-import Services from "../Services";
-import Testimonial from "../Testimonial";
+import Services from "../OtherComponents/Services";
+import Testimonial from "../OtherComponents/Testimonial";
 
 function Home() {
   return (

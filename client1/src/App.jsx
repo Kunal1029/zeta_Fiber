@@ -1,33 +1,35 @@
-import './App.css'
+// App.js
+import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from './components/OtherComponents/Layout';
+import Home from "./components/Home/Home";
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
-import Footer from './components/Footer';
-import Header from './components/Header/Header';
-import Home from "./components/Home/Home"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Plan from './components/Plans/Plan';
 import MainAbout from './components/About/MainAbout';
 import MainPlan from './components/Plans/MainPlan';
 import MainContact from './components/Contact/MainContact';
+import NewUserRegister from './components/RegisterLogin/NewUserRegister';
+import UserLogin from './components/RegisterLogin/UserLogin';
 
 function App() {
- 
-
-  return (
-   <BrowserRouter>
-   <Header />
-   <Routes>
-    <Route path='/' element={<Home />} />
-    <Route path='/about' element={<About />} />
-    <Route path='/contact' element={<Contact />} />
-    <Route path='/plans' element={<Plan />} />
-    <Route path='/mainabout' element={<MainAbout />} />
-    <Route path='/mainplan' element={<MainPlan />} />
-    <Route path='/maincontact' element={<MainContact />} />
-   </Routes>
-   <Footer />
-   </BrowserRouter>
-  )
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Home />} />
+                    <Route path="about" element={<About />} />
+                    <Route path="contact" element={<Contact />} />
+                    <Route path="plans" element={<Plan />} />
+                    <Route path="mainabout" element={<MainAbout />} />
+                    <Route path="mainplan" element={<MainPlan />} />
+                    <Route path="maincontact" element={<MainContact />} />
+                    <Route path="register" element={<NewUserRegister />} />
+                    <Route path="login" element={<UserLogin />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
-export default App
+export default App;

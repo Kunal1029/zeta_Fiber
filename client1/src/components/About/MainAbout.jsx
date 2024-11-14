@@ -1,22 +1,21 @@
 import Network from "../Animation/Network";
+import Wave from "../Animation/Wave";
+import Goals from "./Goals";
 
 function MainAbout() {
   return (
     <div>
       {/* <!-- About --> */}
-      <section
-        className="about d-flex align-items-center text-light py-5"
-        id="about"
-      >
+      <section className="about  text-light py-5" id="about">
         <div className="container">
           <div className="row d-flex align-items-center">
             <div className="col-lg-8 mt-5" data-aos="fade-right">
-              <p>ABOUT US</p>
+              <p className="mb-3 mt-5">ABOUT US</p>
               <h1>
                 We are top internet <br />
                 service company
               </h1>
-              <p className="py-2 para-light">
+              <p className="py-2 ">
                 1 Zeta is your trusted partner in
                 <b className="text-primary">high-speed internet</b>, dedicated
                 to delivering
@@ -25,7 +24,7 @@ function MainAbout() {
                 </b>
                 for homes and businesses alike.
               </p>
-              <p className="py-2 para-light">
+              <p className="py-2 ">
                 We believe in making quality internet accessible to all, with
                 customer service that&#39;s always ready to help. Experience
                 internet without limits – with
@@ -42,29 +41,36 @@ function MainAbout() {
                 [region/city].
               </p>
             </div>
-            
-            <div className="col-lg-4 m-auto wifiabout py-sm-0"
+
+            <div
+              className="col-lg-4 m-auto wifiabout py-sm-0"
               data-aos="fade-down"
-             
             >
-                {/* <img
+              {/* <img
                   className="img-fluid"
                   src="./assets/images/about.png"
                   alt="about"
                 /> */}
-                <Network isWifi={true} />
-                {/* <i className="fa-solid fa-wifi"></i> */}
-                
-                {/* </Network> */}
-                
+              <Network isWifi={true} />
+              {/* <i className="fa-solid fa-wifi"></i> */}
+
+              {/* </Network> */}
+
               {/* <Network /> */}
             </div>
           </div>
           {/* <!-- end of row --> */}
         </div>
-        {/* <!-- end of container --> */}
+
+        <div className="mt-4 mb-4">
+
+         <Wave/>
+        </div>
+        <div className="mt-5">
+          <h2 className="mt-5 mb-4 text-center">About Our Goals</h2>
+          <Goals />
+        </div>
       </section>
-      {/* <!-- end of about --> */}
     </div>
   );
 }

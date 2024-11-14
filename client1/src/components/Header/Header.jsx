@@ -29,7 +29,7 @@ function Header() {
           <a className="navbar-brand logo-text" href="index.html">
             <img src="./assets/images/FIW.png" alt="Logo" width="105" height="38" className="d-inline-block align-text-top" />
           </a>
-
+ 
           <button
             className="navbar-toggler p-0 border-0"
             type="button"
@@ -62,6 +62,13 @@ function Header() {
                   Plans
                 </Link>
               </li>
+            
+              <li className="nav-item">
+                <Link className="nav-link" to="/maincontact" onClick={() => setIsOpen(false)}>
+                  Contact
+                </Link>
+              </li>
+
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -71,27 +78,22 @@ function Header() {
                   aria-expanded="false"
                   href="#"
                 >
-                  Drop
+                  <i className="fa-solid fa-circle-user fa-2xl"></i>
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li>
-                    <a className="dropdown-item" href="article.html" onClick={() => setIsOpen(false)}>Article Details</a>
+                    <Link className="dropdown-item" to={"/login"}>Login</Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="terms.html" onClick={() => setIsOpen(false)}>Terms Conditions</a>
+                    <Link className="dropdown-item" to={"/register"}>Register</Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="privacy.html" onClick={() => setIsOpen(false)}>Privacy Policy</a>
+                    <Link className="dropdown-item" href="privacy.html" onClick={() => setIsOpen(false)}>Privacy Policy</Link>
                   </li>
                 </ul>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/maincontact" onClick={() => setIsOpen(false)}>
-                  Contact
-                </Link>
-              </li>
             </ul>
-            <span className="nav-item social-icons">
+            {/* <span className="nav-item social-icons">
               <span className="fa-stack">
                 <a href="#your-link">
                   <i className="fas fa-circle fa-stack-2x"></i>
@@ -104,7 +106,7 @@ function Header() {
                   <i className="fab fa-twitter fa-stack-1x"></i>
                 </a>
               </span>
-            </span>
+            </span> */}
           </div>
         </div>
       </nav>

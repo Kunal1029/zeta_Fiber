@@ -6,6 +6,7 @@
       #02255d,
       #0078d7
     );
+    
    }
   
   .faq-accordion-container {
@@ -19,11 +20,13 @@
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: white;
+    width: 75%;
   }
 
   .faq-accordion-content {
     margin: auto;
-    width: 100%;
+    /* margin-left: 40px; */
+    /* width: 100%; */
     margin-bottom: 20px;
   }
 
@@ -81,10 +84,11 @@
     text-align: justify;
   }
   .faq-accordion-answer-active {
-    min-height: 70px;
+    min-height: 100px;
   }
   
   @media (max-width: 1150px){
+    
     .faq-accordion-answer-active {
         min-height: 100px;
       }
@@ -104,15 +108,33 @@
         margin: 10px;
       }
   }
+  @media (max-width: 992px) {
+    .faq-accordion-container {
+     
+      width: 90%;
+    }
+  }
+  @media (max-width: 767px) {
+    .faq-accordion-container {
+     
+      width: 100%;
+    }
+    .faq-accordion-container {
+      border-radius: 0px;
+      margin: 0px;
+    }
+    .faq-accordion-answer-active {
+      min-height: 140px;
+    }
+   
+  }
 
   @media (max-width: 500px) {
     .faq-accordion-container {
         border-radius: 0px;
         margin: 0px;
       }
-    .faq-accordion-answer-active {
-        min-height: 80px;
-      }
+    
     .faq-accordion-answer {
         font-size: 0.9rem;
       }
@@ -121,9 +143,7 @@
       }
   }
   @media (max-width: 350px) {
-    .faq-accordion-answer-active {
-        min-height: 75px;
-      }
+    
     .faq-accordion-answer {
         font-size: 0.8rem;
       }

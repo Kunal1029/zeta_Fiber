@@ -59,10 +59,7 @@ function Plan() {
           <p>OUR PLANS</p>
           <h2 className="py-2 mb-3">Explore unlimited possibilities</h2>
           <p className="para-light">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-            asperiores, quia accusantium sunt corporis optio recusandae? Nostrum
-            libero pariatur cumque, ipsa dolores voluptatibus voluptate alias
-            sit fuga. Itaque, ea quo.
+          From casual browsing to non-stop streaming, 1 Zeta Fiber has a plan that fits your lifestyle. Enjoy high-speed, reliable internet at prices that suit any budget.
           </p>
         </div>
  

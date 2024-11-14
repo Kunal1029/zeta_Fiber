@@ -7,19 +7,19 @@ import "slick-carousel/slick/slick-theme.css";
 const testimonialData = [
   {
     id: 1,
-    text: "I switched to 1 Zeta a few months ago, and I couldn’t be happier. The speed is fantastic, and the customer support is very responsive. It’s great to have a reliable internet connection that doesn’t cost a fortune!",
+    text: "I switched to 1 Zeta a few months ago, and I couldn’t be happier. The speed is Great, and the customer support is very responsive. It’s great to have a reliable internet connection that doesn’t cost a fortune!",
     name: "Amit Sharma",
     image: "./assets/images/amit.png", // Add your image or remove if not required
   },
   {
     id: 2,
-    text: "1 Zeta has been a game-changer for my home office setup. The connection is fast and steady, even with multiple devices. I highly recommend them to anyone looking for affordable and quality internet.",
+    text: "1 Zeta has been a game-changer for my home office setup. The connection is fast and steady, even with multiple devices & best service. I highly recommend them to anyone looking for affordable and quality internet.",
     name: "Priya Deshmukh",
     image: "./assets/images/priya.png", // Add your image or remove if not required
   },
   {
     id: 3,
-    text: "After dealing with inconsistent connections, switching to 1 Zeta has been amazing. The setup was quick, and their customer service team was so helpful. I finally have internet I can rely on.",
+    text: "After dealing with inconsistent connections, switching to 1 Zeta has been amazing. The setup was quick, speed is great, and their customer service team was so helpful. I finally have internet I can rely on.",
     name: "Rajesh Gupta",
     image: "./assets/images/rajesh.png", // Add your image or remove if not required
   },
@@ -70,11 +70,8 @@ export default function Testimonial() {
             <div className="text-center w-lg-75 m-auto pb-4">
               <p>TESTIMONIALS</p>
               <h2 className="py-2">What Our Clients Say</h2>
-              <p className="para-light">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Adipisci esse facilis vel, neque ipsa mollitia impedit, commodi
-                ab illo dignissimos, voluptatum quae amet sed tenetur dolores
-                reprehenderit laudantium quo sint.
+              <p className="para-light text-center">
+              See what our happy customers have to say about the high-speed, reliable service of 1 Zeta Fiber!
               </p>
             </div>
           </div>
